@@ -17,10 +17,10 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="skin.mediahub" version="1.4.0" name="MediaHub" provider-name="MediaHub">
+<addon id="skin.mediahub" version="1.5.0" name="MediaHub" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
-		<import addon="script.mediahub.helper" version="1.1.0"/>
+		<import addon="script.mediahub.helper" version="1.2.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml"/>
@@ -38,10 +38,10 @@
 			<screenshot>resources/screenshot-02.jpg</screenshot>
 			<screenshot>resources/screenshot-03.jpg</screenshot>
 		</assets>
-		<news>1.4.0 - My List, thumbs up/down/love, More Like This, actor pages, trailer previews, Disney+-style show page, new search page, "Who's watching?" profiles, Kids mode, accent colours, pause screen with logo, Skip Intro.</news>
+		<news>1.5.0 - MediaHub now tells you when an update is out: a banner on the home screen with an Update now button, and Check for updates in Skin settings.</news>
 	</extension>
 </addon>
-<addon id="script.mediahub.helper" name="MediaHub Helper" version="1.1.0" provider-name="MediaHub">
+<addon id="script.mediahub.helper" name="MediaHub Helper" version="1.2.0" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
 	</requires>
