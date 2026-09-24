@@ -17,10 +17,10 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="skin.mediahub" version="1.7.0" name="MediaHub" provider-name="MediaHub">
+<addon id="skin.mediahub" version="1.8.0" name="MediaHub" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
-		<import addon="script.mediahub.helper" version="1.4.0"/>
+		<import addon="script.mediahub.helper" version="1.5.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml"/>
@@ -38,10 +38,10 @@
 			<screenshot>resources/screenshot-02.jpg</screenshot>
 			<screenshot>resources/screenshot-03.jpg</screenshot>
 		</assets>
-		<news>1.7.0 - Trailer previews in the home rows, Because You Watched, mood rows and Coming Soon; Finish by, chapters, intro memory and Night / Dialogue sound modes in the player; people search, a mic key, Surprise me and Movies filter chips; profile avatars, Your year and downloads; seasonal themes and animated network cards. 1.6.1 - Fixed "Update failed" when pressing Update now: the update is now handed to Kodi's own installer. 1.6.0 - New player bar with the title's clearart or logo and 4K / HDR / Dolby / 5.1 badges, an Audio &amp; Subtitles panel, Skip Recap and Skip Credits, NEW and 4K badges, collection pages, a MediaHub screensaver, music screens and Live TV.</news>
+		<news>1.8.0 - A start-up intro with its own sound, and a MediaHub splash while Kodi loads. 1.7.0 - Trailer previews in the home rows, Because You Watched, mood rows and Coming Soon; Finish by, chapters, intro memory and Night / Dialogue sound modes in the player; people search, a mic key, Surprise me and Movies filter chips; profile avatars, Your year and downloads; seasonal themes and animated network cards. 1.6.1 - Fixed "Update failed" when pressing Update now: the update is now handed to Kodi's own installer. 1.6.0 - New player bar with the title's clearart or logo and 4K / HDR / Dolby / 5.1 badges, an Audio &amp; Subtitles panel, Skip Recap and Skip Credits, NEW and 4K badges, collection pages, a MediaHub screensaver, music screens and Live TV.</news>
 	</extension>
 </addon>
-<addon id="script.mediahub.helper" name="MediaHub Helper" version="1.4.0" provider-name="MediaHub">
+<addon id="script.mediahub.helper" name="MediaHub Helper" version="1.5.0" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
 	</requires>
@@ -68,13 +68,13 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Up Next, My List, thumbs and recommendations for the MediaHub skin</summary>
-		<description lang="en_GB">Runs in the background for the MediaHub skin. It works out Up Next (the next episode of every TV show you are part-way through, with the following episodes queued when you play one), keeps My List, stores your thumbs up / down as the library's own "my rating", and ranks Recommended For You and More Like This from them. It also fills in collection pages, works out the NEW badges, lists the audio and subtitle tracks for the player's Audio &amp; Subtitles panel, runs the MediaHub screensaver, plays trailer previews in the home rows, keeps Finish by, intro memory and the sound modes going while you watch, finds people when you search, picks a Surprise, works out Your year, downloads titles to watch offline and checks for MediaHub updates.</description>
+		<description lang="en_GB">Runs in the background for the MediaHub skin. It works out Up Next (the next episode of every TV show you are part-way through, with the following episodes queued when you play one), keeps My List, stores your thumbs up / down as the library's own "my rating", and ranks Recommended For You and More Like This from them. It also fills in collection pages, works out the NEW badges, lists the audio and subtitle tracks for the player's Audio &amp; Subtitles panel, runs the start-up intro and the MediaHub screensaver, plays trailer previews in the home rows, keeps Finish by, intro memory and the sound modes going while you watch, finds people when you search, picks a Surprise, works out Your year, downloads titles to watch offline and checks for MediaHub updates.</description>
 		<platform>all</platform>
 		<license>GPL-2.0-or-later</license>
 		<assets>
 			<icon>resources/icon.png</icon>
 		</assets>
-		<news>1.4.0 - Trailer previews, Because You Watched, Coming Soon, Finish by, intro memory, sound modes, people search, Surprise me, avatars, Your year and downloads. 1.3.1 - Update now no longer fails: it hands the update to Kodi and finishes after Kodi restarts the helper. 1.3.0 - Collections, NEW badges, the audio / subtitle track list and the MediaHub screensaver.</news>
+		<news>1.5.0 - Plays the start-up intro and its sound, and puts the MediaHub splash in place. 1.4.0 - Trailer previews, Because You Watched, Coming Soon, Finish by, intro memory, sound modes, people search, Surprise me, avatars, Your year and downloads. 1.3.1 - Update now no longer fails: it hands the update to Kodi and finishes after Kodi restarts the helper. 1.3.0 - Collections, NEW badges, the audio / subtitle track list and the MediaHub screensaver.</news>
 	</extension>
 </addon>
 </addons>
