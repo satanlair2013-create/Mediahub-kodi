@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="repository.mediahub" name="MediaHub Repository" version="1.0.0" provider-name="MediaHub">
+	<extension point="xbmc.addon.repository" name="MediaHub Repository">
+		<dir>
+			<info compressed="false">https://satanlair2013-create.github.io/mediahub-kodi/repo/addons.xml</info>
+			<checksum>https://satanlair2013-create.github.io/mediahub-kodi/repo/addons.xml.md5</checksum>
+			<datadir zip="true">https://satanlair2013-create.github.io/mediahub-kodi/repo/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Installs and updates the MediaHub skin</summary>
+		<description lang="en_GB">Repository for the MediaHub streaming-style skin for movies and TV shows. Install the skin from Install from repository - MediaHub Repository - Look and feel - Skin, and it will be kept up to date automatically.</description>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+<addon id="skin.mediahub" version="1.0.0" name="MediaHub" provider-name="MediaHub">
+	<requires>
+		<import addon="xbmc.gui" version="5.17.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml"/>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">A streaming-app style skin for movies and TV shows</summary>
+		<description lang="en_GB">MediaHub turns your Kodi movie and TV library into a modern streaming home screen: a rotating hero slider across the top, a row of network cards (Disney, Pixar, Marvel, Star Wars, National Geographic, Star - all customisable) that open a hub for that studio or network with its own slider, and rows for Continue Watching, recommendations, new movies and new episodes.</description>
+		<disclaimer lang="en_GB">The network card artwork is plain typography. Studio and network names are trademarks of their respective owners.</disclaimer>
+		<platform>all</platform>
+		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+		</assets>
+		<news>1.0.0 - First release</news>
+	</extension>
+</addon>
+</addons>
