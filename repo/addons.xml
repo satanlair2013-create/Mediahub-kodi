@@ -17,7 +17,7 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="skin.mediahub" version="1.0.0" name="MediaHub" provider-name="MediaHub">
+<addon id="skin.mediahub" version="1.1.0" name="MediaHub" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 	</requires>
@@ -37,7 +37,7 @@
 			<screenshot>resources/screenshot-02.jpg</screenshot>
 			<screenshot>resources/screenshot-03.jpg</screenshot>
 		</assets>
-		<news>1.0.0 - First release</news>
+		<news>1.1.0 - 38 built-in network cards that only appear when your library has titles from them; the card row is now a slider; new network card editor.</news>
 	</extension>
 </addon>
 </addons>
