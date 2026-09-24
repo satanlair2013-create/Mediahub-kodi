@@ -17,17 +17,17 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="skin.mediahub" version="1.8.0" name="MediaHub" provider-name="MediaHub">
+<addon id="skin.mediahub" version="1.9.0" name="MediaHub" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
-		<import addon="script.mediahub.helper" version="1.5.0"/>
+		<import addon="script.mediahub.helper" version="1.6.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml"/>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">A streaming-app style skin for movies and TV shows</summary>
-		<description lang="en_GB">MediaHub turns your Kodi movie and TV library into a modern streaming app: a rotating hero slider, network cards (Disney, Pixar, Marvel, Star Wars, National Geographic, Star and 30+ more) that open a hub for that studio or network, and home rows you choose and reorder. Add titles to My List, rate them with thumbs up / down / love for better recommendations, and find more with More Like This, actor pages and a live search page. TV shows get a Disney+-style page with season tabs and movie collections get their own page, Up Next picks up where you left off, and NEW and 4K badges show what's new and in 4K. The player bar shows the title's clearart or logo with 4K, HDR, Dolby and 5.1 badges, with an Audio &amp; Subtitles panel, a pause screen and Skip Intro / Recap / Credits buttons. There are also music screens with a now playing page, a Live TV guide, a screensaver made from your library, a "Who's watching?" profile screen, a Kids mode with a PIN and six accent colours.</description>
+		<description lang="en_GB">MediaHub turns your Kodi movie and TV library into a modern streaming app: a rotating hero slider, network cards (Disney, Pixar, Marvel, Star Wars, National Geographic, Star and 30+ more) that open a hub for that studio or network, and home rows you choose and reorder. Add titles to My List, rate them with thumbs up / down / love for better recommendations, and find more with More Like This, actor pages and a live search page. TV shows get a Disney+-style page with season tabs and movie collections get their own page, Up Next picks up where you left off, and NEW and 4K badges show what's new and in 4K. The player bar shows the title's clearart or logo with 4K, HDR, Dolby and 5.1 badges, with an Audio &amp; Subtitles panel, a pause screen and Skip Intro / Recap / Credits buttons. There are also music screens with a now playing page, a Live TV guide, a screensaver made from your library, a "Who's watching?" profile screen, a Kids mode with a PIN and a bedtime, a shared Family List, backup and restore, large text and high contrast, and seven accent colours.</description>
 		<disclaimer lang="en_GB">The network card artwork is plain typography. Studio and network names are trademarks of their respective owners.</disclaimer>
 		<platform>all</platform>
 		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
@@ -38,10 +38,10 @@
 			<screenshot>resources/screenshot-02.jpg</screenshot>
 			<screenshot>resources/screenshot-03.jpg</screenshot>
 		</assets>
-		<news>1.8.0 - A start-up intro with its own sound, and a MediaHub splash while Kodi loads. 1.7.0 - Trailer previews in the home rows, Because You Watched, mood rows and Coming Soon; Finish by, chapters, intro memory and Night / Dialogue sound modes in the player; people search, a mic key, Surprise me and Movies filter chips; profile avatars, Your year and downloads; seasonal themes and animated network cards. 1.6.1 - Fixed "Update failed" when pressing Update now: the update is now handed to Kodi's own installer. 1.6.0 - New player bar with the title's clearart or logo and 4K / HDR / Dolby / 5.1 badges, an Audio &amp; Subtitles panel, Skip Recap and Skip Credits, NEW and 4K badges, collection pages, a MediaHub screensaver, music screens and Live TV.</news>
+		<news>1.9.0 - A welcome setup; Top 10 rows, a silent trailer in the banner, a greeting and an On now row for Live TV; ratings badges, extras and season progress; a sleep timer, subtitle styles, Are you still watching? and an after-movie page; Kids bedtime, a shared Family List and backup / restore; large text, high contrast, reduce motion, colour from the artwork and lyrics. 1.8.0 - A start-up intro with its own sound, and a MediaHub splash while Kodi loads. 1.7.0 - Trailer previews in the home rows, Because You Watched, mood rows and Coming Soon; Finish by, chapters, intro memory and Night / Dialogue sound modes in the player; people search, a mic key, Surprise me and Movies filter chips; profile avatars, Your year and downloads; seasonal themes and animated network cards. 1.6.1 - Fixed "Update failed" when pressing Update now: the update is now handed to Kodi's own installer. 1.6.0 - New player bar with the title's clearart or logo and 4K / HDR / Dolby / 5.1 badges, an Audio &amp; Subtitles panel, Skip Recap and Skip Credits, NEW and 4K badges, collection pages, a MediaHub screensaver, music screens and Live TV.</news>
 	</extension>
 </addon>
-<addon id="script.mediahub.helper" name="MediaHub Helper" version="1.5.0" provider-name="MediaHub">
+<addon id="script.mediahub.helper" name="MediaHub Helper" version="1.6.0" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
 	</requires>
@@ -60,6 +60,10 @@
 				<label>32089</label>
 				<visible>String.IsEqual(Window(Home).Property(MH.InDownloads),1) + !ListItem.IsFolder</visible>
 			</item>
+			<item library="context.py" args="hidecontinue">
+				<label>32104</label>
+				<visible>ListItem.IsResumable | [String.IsEqual(ListItem.DBType,tvshow) + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)]</visible>
+			</item>
 			<item library="context.py" args="rate">
 				<label>32012</label>
 				<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)</visible>
@@ -74,7 +78,7 @@
 		<assets>
 			<icon>resources/icon.png</icon>
 		</assets>
-		<news>1.5.0 - Plays the start-up intro and its sound, and puts the MediaHub splash in place. 1.4.0 - Trailer previews, Because You Watched, Coming Soon, Finish by, intro memory, sound modes, people search, Surprise me, avatars, Your year and downloads. 1.3.1 - Update now no longer fails: it hands the update to Kodi and finishes after Kodi restarts the helper. 1.3.0 - Collections, NEW badges, the audio / subtitle track list and the MediaHub screensaver.</news>
+		<news>1.6.0 - Sleep timer, subtitle styles, Are you still watching?, the after-movie page, the banner trailer, Remove from Continue Watching, ratings badges, extras, Mark season watched, Kids bedtime, the Family List, backup / restore and the text size setting. 1.5.0 - Plays the start-up intro and its sound, and puts the MediaHub splash in place. 1.4.0 - Trailer previews, Because You Watched, Coming Soon, Finish by, intro memory, sound modes, people search, Surprise me, avatars, Your year and downloads. 1.3.1 - Update now no longer fails: it hands the update to Kodi and finishes after Kodi restarts the helper. 1.3.0 - Collections, NEW badges, the audio / subtitle track list and the MediaHub screensaver.</news>
 	</extension>
 </addon>
 </addons>
