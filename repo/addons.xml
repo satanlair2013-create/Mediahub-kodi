@@ -3,9 +3,9 @@
 <addon id="repository.mediahub" name="MediaHub Repository" version="1.0.0" provider-name="MediaHub">
 	<extension point="xbmc.addon.repository" name="MediaHub Repository">
 		<dir>
-			<info compressed="false">https://satanlair2013-create.github.io/mediahub-kodi/repo/addons.xml</info>
-			<checksum>https://satanlair2013-create.github.io/mediahub-kodi/repo/addons.xml.md5</checksum>
-			<datadir zip="true">https://satanlair2013-create.github.io/mediahub-kodi/repo/</datadir>
+			<info compressed="false">https://satanlair2013-create.github.io/Mediahub-kodi/repo/addons.xml</info>
+			<checksum>https://satanlair2013-create.github.io/Mediahub-kodi/repo/addons.xml.md5</checksum>
+			<datadir zip="true">https://satanlair2013-create.github.io/Mediahub-kodi/repo/</datadir>
 		</dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
