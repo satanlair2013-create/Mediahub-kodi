@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="repository.mediahub" name="MediaHub Repository" version="1.0.0" provider-name="MediaHub">
+<addon id="repository.mediahub" name="MediaHub Repository" version="1.0.1" provider-name="MediaHub">
 	<extension point="xbmc.addon.repository" name="MediaHub Repository">
 		<dir>
 			<info compressed="false">https://satanlair2013-create.github.io/Mediahub-kodi/repo/addons.xml</info>
@@ -17,10 +17,10 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="skin.mediahub" version="1.6.0" name="MediaHub" provider-name="MediaHub">
+<addon id="skin.mediahub" version="1.6.1" name="MediaHub" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
-		<import addon="script.mediahub.helper" version="1.3.0"/>
+		<import addon="script.mediahub.helper" version="1.3.1"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml"/>
@@ -38,10 +38,10 @@
 			<screenshot>resources/screenshot-02.jpg</screenshot>
 			<screenshot>resources/screenshot-03.jpg</screenshot>
 		</assets>
-		<news>1.6.0 - New player bar with the title's clearart or logo and 4K / HDR / Dolby / 5.1 badges, an Audio &amp; Subtitles panel, Skip Recap and Skip Credits, NEW and 4K badges, collection pages, a MediaHub screensaver, music screens (now playing, albums, queue) and Live TV (guide, channels, recordings).</news>
+		<news>1.6.1 - Fixed "Update failed" when pressing Update now: the update is now handed to Kodi's own installer. 1.6.0 - New player bar with the title's clearart or logo and 4K / HDR / Dolby / 5.1 badges, an Audio &amp; Subtitles panel, Skip Recap and Skip Credits, NEW and 4K badges, collection pages, a MediaHub screensaver, music screens and Live TV.</news>
 	</extension>
 </addon>
-<addon id="script.mediahub.helper" name="MediaHub Helper" version="1.3.0" provider-name="MediaHub">
+<addon id="script.mediahub.helper" name="MediaHub Helper" version="1.3.1" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
 	</requires>
@@ -70,7 +70,7 @@
 		<assets>
 			<icon>resources/icon.png</icon>
 		</assets>
-		<news>1.3.0 - Collections, NEW badges, the audio / subtitle track list and the MediaHub screensaver.</news>
+		<news>1.3.1 - Update now no longer fails: it hands the update to Kodi and finishes after Kodi restarts the helper. 1.3.0 - Collections, NEW badges, the audio / subtitle track list and the MediaHub screensaver.</news>
 	</extension>
 </addon>
 </addons>
