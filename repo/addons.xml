@@ -17,17 +17,17 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="skin.mediahub" version="1.3.0" name="MediaHub" provider-name="MediaHub">
+<addon id="skin.mediahub" version="1.4.0" name="MediaHub" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
-		<import addon="script.mediahub.helper" version="1.0.0"/>
+		<import addon="script.mediahub.helper" version="1.1.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml"/>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">A streaming-app style skin for movies and TV shows</summary>
-		<description lang="en_GB">MediaHub turns your Kodi movie and TV library into a modern streaming home screen: a rotating hero slider across the top, a row of network cards (Disney, Pixar, Marvel, Star Wars, National Geographic, Star - all customisable) that open a hub for that studio or network with its own slider, and rows you can choose and reorder: Continue Watching, Up Next, recommendations, new movies and episodes, top rated, genres and your own playlists. When an episode ends, an Up Next card shows what plays next.</description>
+		<description lang="en_GB">MediaHub turns your Kodi movie and TV library into a modern streaming app: a rotating hero slider, network cards (Disney, Pixar, Marvel, Star Wars, National Geographic, Star and 30+ more) that open a hub for that studio or network, and home rows you choose and reorder. Add titles to My List, rate them with thumbs up / down / love for better recommendations, and find more with More Like This, actor pages and a live search page. TV shows get a Disney+-style page with season tabs, Up Next picks up where you left off, and playback has a pause screen with the title's logo and a Skip Intro button. There's also a "Who's watching?" profile screen, a Kids mode with a PIN and six accent colours.</description>
 		<disclaimer lang="en_GB">The network card artwork is plain typography. Studio and network names are trademarks of their respective owners.</disclaimer>
 		<platform>all</platform>
 		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
@@ -38,19 +38,33 @@
 			<screenshot>resources/screenshot-02.jpg</screenshot>
 			<screenshot>resources/screenshot-03.jpg</screenshot>
 		</assets>
-		<news>1.3.0 - Up Next row and end-of-episode Up Next card, choose and reorder the home rows (genres, top rated, custom playlists), new subtitle download and bookmarks screens.</news>
+		<news>1.4.0 - My List, thumbs up/down/love, More Like This, actor pages, trailer previews, Disney+-style show page, new search page, "Who's watching?" profiles, Kids mode, accent colours, pause screen with logo, Skip Intro.</news>
 	</extension>
 </addon>
-<addon id="script.mediahub.helper" name="MediaHub Helper" version="1.0.0" provider-name="MediaHub">
+<addon id="script.mediahub.helper" name="MediaHub Helper" version="1.1.0" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
 	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>video</provides>
+	<extension point="xbmc.service" library="service.py" start="login"/>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<item library="context.py" args="mylist">
+				<label>32010</label>
+				<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !String.Contains(ListItem.Tag,My List)</visible>
+			</item>
+			<item library="context.py" args="mylist">
+				<label>32011</label>
+				<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + String.Contains(ListItem.Tag,My List)</visible>
+			</item>
+			<item library="context.py" args="rate">
+				<label>32012</label>
+				<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)</visible>
+			</item>
+		</menu>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">Up Next row for the MediaHub skin</summary>
-		<description lang="en_GB">Provides the "Up Next" list used by the MediaHub skin: the next unwatched episode of every TV show you are part-way through. Playing an episode from it queues the episodes that follow.</description>
+		<summary lang="en_GB">Up Next, My List, thumbs and recommendations for the MediaHub skin</summary>
+		<description lang="en_GB">Runs in the background for the MediaHub skin. It works out Up Next (the next episode of every TV show you are part-way through, with the following episodes queued when you play one), keeps My List, stores your thumbs up / down as the library's own "my rating", and ranks Recommended For You and More Like This from them.</description>
 		<platform>all</platform>
 		<license>GPL-2.0-or-later</license>
 		<assets>
