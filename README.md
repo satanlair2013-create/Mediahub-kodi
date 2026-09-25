@@ -101,6 +101,7 @@ The screenshots come from a real Kodi instance running the skin against a small 
 - **Music**: an album-art grid, album pages with the track list, a queue, and a **now playing** screen with big album art on a soft colour wash of it (or the artist's fanart), the song, artist and album, progress, what's up next and the song's **lyrics**. Press OK for the controls: previous, play/pause, next, stop, shuffle, repeat, lyrics and the queue.
 - **Live TV**: **My Channels** on the home screen, a **mini guide** (channel, now with progress, next) when you press Info while watching, a TV guide with channel logos, a "now" line and the focused programme's details at the top; a channel list with what's on now; recordings, timers and search; programme details; and, while watching, a channel list and the channel's guide over the picture (the guide button in the player bar). A **last channel** button in the player bar flips back to the channel you watched before, and two home rows can each show a **channel group** such as Sports or News. It works with any PVR add-on, for example IPTV Simple Client, including Xtream Codes services (see [Live TV extras](#live-tv-extras)).
 - **MediaHub IPTV** (a separate add-on in the MediaHub repository): sign in to your **Xtream Codes** IPTV service and get Live TV with what's on now and next, catch-up, and films and series with their posters and plots, resume and the next episode, with its own side-menu entry and home rows. It has a **TV guide** page, a **Channels** panel and mini guide while you watch, **last channel** and **channel numbers**, programme **reminders**, **catch-up search**, **My List**, **downloads** and **more than one account** (see [MediaHub IPTV](#mediahub-iptv-xtream-codes)).
+- **More MediaHub add-ons** (also in the MediaHub repository, each on its own): **MediaHub Radio** (thousands of internet radio stations), **MediaHub Podcasts** (find, follow and listen), **MediaHub Web Remote** (your phone's web browser as the remote) and **MediaHub Sync** (what you've watched and your lists, the same on every Kodi in the house). See [More MediaHub add-ons](#more-mediahub-add-ons).
 - **On demand**: an IPTV video-on-demand playlist as **TV shows (by season) and movies**, A-Z with search, read straight from the playlist instead of loading it into Live TV, with **posters and plots**, **resume** and the **next episode**, and groups you'd rather not see hidden behind the Kids mode PIN (see [On demand](#on-demand)).
 - **Calendar**: the next two weeks of episodes for the shows in your library, day by day (see [Calendar](#calendar)).
 - **Quick menu**: holding OK (the context menu) shows what it's for at the top, with Play, Play trailer, Mark as watched, My List and the rest.
@@ -206,6 +207,7 @@ Row types:
 - Mood rows: **Feel-Good Movies**, **Edge of Your Seat**, **Short on Time (Under 90 Minutes)** and **Watch Together**
 - **Top 10 Movies** and **Top 10 TV Shows**: the ten with the most votes on TMDB / IMDb, with big rank numbers beside the posters
 - **Family List**: the titles on the shared [Family List](#family-list)
+- With [MediaHub Radio](#mediahub-radio) and [MediaHub Podcasts](#mediahub-podcasts): **Radio: Your Stations**, **Radio: Recently Played**, **Podcasts: New Episodes** (the newest unplayed episode of each podcast you follow) and **Podcasts: Continue Listening**. Their cards show the station's logo or the podcast's cover.
 - **New This Week**: episodes in your library that aired in the last seven days, newest first, one per show.
 - **Directed By …**: a director with three or more of your movies (favouring ones you've watched or liked) and their films. A different director each day.
 - **Marvel in Story Order**: the Marvel Cinematic Universe films you have, in the order the story happens, starting from the first one you haven't watched (*4 / 12*), so the row is where your marathon is up to.
@@ -402,6 +404,56 @@ Only use a service you are licensed to watch.
 - **Banner**: **Skin settings → Slider shows → IPTV: new movies and series** fills the home banner with your service's newest films and series, with their backdrops and plots.
 
 The add-on doesn't come with any channels, films or series: it plays what your own service offers. Only use a service you are licensed to watch.
+
+## More MediaHub add-ons
+
+Four more add-ons go with MediaHub (each works with any skin). Get them from **Skin settings → More from MediaHub** (or **Add-ons → Install from repository → MediaHub Repository**). Radio and Podcasts then appear in the side menu.
+
+### MediaHub Radio
+
+**MediaHub Radio** (`plugin.audio.mediahub.radio`) plays internet radio stations from [radio-browser.info](https://www.radio-browser.info), a free, community-run list (no account).
+
+- **Your stations**: hold OK on a station and choose **Add to Your stations**; *Move up* and *Move down* put them in your order. **Recently played** has the last 30.
+- **Popular in** your country (from Kodi's region; **Your country** or the long-press menu changes it), **Most listened**, **Most voted** and **Listened to right now**.
+- **Genres**, **Countries** and **Languages**, each with the ones with the most stations first, and **Search** by name (or a genre or place).
+- The player shows the song playing when the station sends it, and the station's logo. Next and Previous in the player go through the list you started from.
+
+### MediaHub Podcasts
+
+**MediaHub Podcasts** (`plugin.audio.mediahub.podcasts`) finds podcasts with Apple's free podcast search and plays them straight from their own feeds.
+
+- **Search**, **Top podcasts** in your country, or **Add a podcast by its feed address** (any RSS feed).
+- **Follow** a podcast (on its page, or hold OK). **Your podcasts** lists them, and **Latest episodes** has their newest episodes, unplayed first, with **NEW** on the ones that came out since you last opened the podcast.
+- Episodes **resume** where you stopped (or *Play from beginning*), get a tick once played, and **Continue listening** has the ones you're part-way through. Hold OK for *Mark as played* or *Mark all as played*.
+- Every three hours, the feeds of the podcasts you follow are checked, and a message says when a new episode comes out (**MediaHub Podcasts settings** turns it off). Video podcasts play too.
+
+### MediaHub Web Remote
+
+**MediaHub Web Remote** (`service.mediahub.webremote`) turns a phone's web browser into Kodi's remote. There's nothing to install on the phone.
+
+1. **Skin settings → More from MediaHub → MediaHub Web Remote: connect a phone** shows a QR code and the remote's address (for example `http://192.168.1.20:8585`).
+2. Scan the QR code with the phone's camera: the remote opens and is paired straight away. Or type the address into the phone's browser and enter the code the TV shows.
+3. Add the page to the phone's home screen to open it like an app.
+
+The remote has a pad (tap the arrows, or swipe; tap OK), Back, Home, Info and Menu, what's playing with its picture and a seek bar, play / pause, skip and ±10 / 30 seconds, volume and mute, **Type on the TV** (for Kodi's keyboard), **Search** across your films, shows and MediaHub IPTV, and **Channels**: your MediaHub IPTV channels and MediaHub Radio stations, one tap to start. While a MediaHub IPTV channel plays it adds **Channel −**, **Last channel** and **Channel +**.
+
+It works on your home network only, and each phone needs the code from the TV once. **MediaHub Web Remote settings** change the port (8585) or turn it off, and **Forget paired phones** makes every phone pair again.
+
+### MediaHub Sync
+
+**MediaHub Sync** (`service.mediahub.sync`) keeps several Kodi devices in step through a folder they can all reach: a network share, a NAS, or a folder a cloud drive keeps in step on each device. There's no MediaHub account or server.
+
+1. Install it on each Kodi, then **Skin settings → More from MediaHub → MediaHub Sync: sync now** and pick the folder (the same one on every device).
+2. It syncs a little after Kodi starts, every 15 minutes (**MediaHub Sync settings**: 5, 15 or 60) and shortly after something stops playing. **Sync now** does it straight away, and the Skin settings row says when it last synced and with which devices.
+
+What it keeps in step (each can be turned off in its settings):
+
+- **Films, shows and episodes**: watched, where you stopped, when you last watched, thumbs and **My List**. They're matched by their IMDb, TMDB or TVDB id (or title and year; episodes by their show and number), so the libraries don't have to be the same.
+- **MediaHub's Family List**.
+- **MediaHub IPTV**: where you are in films and episodes, My channels, My List, reminders and hidden categories, per account.
+- **MediaHub Radio**: Your stations. **MediaHub Podcasts**: the podcasts you follow and where you are in each episode.
+
+Each Kodi writes only its own file in the folder's `MediaHub Sync` folder and reads the others', so two devices never write over each other. When the same thing was changed on two devices, the latest change wins. The first time, lists (your stations, podcasts, channels) are put together rather than replaced.
 
 ## Storage
 
