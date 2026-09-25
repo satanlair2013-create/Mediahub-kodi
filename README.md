@@ -1,12 +1,333 @@
-# MediaHub for Kodi — downloads
+# MediaHub — a streaming-style Kodi skin for movies and TV
 
-This site hosts the **MediaHub** Kodi skin: a streaming-style skin for movies and TV shows with a hero slider, network cards, network hubs and title logos. It needs **Kodi 21 or newer**.
+`skin.mediahub` gives Kodi's movie and TV library a streaming-app home screen: a rotating **hero slider** across the top, a row of **network cards** under it (Disney, Pixar, Marvel, Star Wars, National Geographic, Star), and rows of your movies and shows below. Each network card opens its own **network hub**, which has its own slider at the top and only shows titles from that studio or network.
 
-## Install on Apple TV, Fire TV or any Kodi box
+**To install**, add `https://satanlair2013-create.github.io/Mediahub-kodi/` as a source in Kodi's file manager and follow [Install](#install).
 
-1. Turn on **Settings → System → Add-ons → Unknown sources**.
-2. Go to **Settings → File manager → Add source** and enter `https://satanlair2013-create.github.io/Mediahub-kodi/`. Name it `mediahub`.
-3. Go to **Settings → Add-ons → Install from zip file → mediahub → repository.mediahub-1.0.1.zip**.
-4. Go to **Install from repository → MediaHub Repository → Look and feel → Skin → MediaHub → Install**.
+![Home screen](screenshots/home.jpg)
 
-Installing through the repository means Kodi also installs the **MediaHub Helper** add-on the skin needs (for the Up Next row), and updates both automatically.
+| Network card focused | Network hub (Pixar) |
+| --- | --- |
+| ![Network cards](screenshots/cards.jpg) | ![Network hub](screenshots/hub.jpg) |
+| **Movie library (poster view)** | **Details page** |
+| ![Movies](screenshots/movies.jpg) | ![Info](screenshots/info.jpg) |
+| **Network card editor** | **Home row editor** |
+| ![Card editor](screenshots/card-editor.jpg) | ![Home rows](screenshots/home-rows.jpg) |
+| **Up Next row** | **Up Next card at the end of an episode** |
+| ![Up Next row](screenshots/up-next-row.jpg) | ![Up Next card](screenshots/up-next-card.jpg) |
+| **Episodes (landscape view)** | **Side menu** |
+| ![Episodes](screenshots/episodes.jpg) | ![Side menu](screenshots/rail.jpg) |
+| **Player bar: clearart, 4K / Dolby / 5.1 badges, languages** | **Subtitle download** |
+| ![OSD](screenshots/osd.jpg) | ![Subtitles](screenshots/subtitles.jpg) |
+| **Chapters and bookmarks** | **My List row** |
+| ![Chapters](screenshots/chapters.jpg) | ![My List](screenshots/my-list.jpg) |
+| **Details page: My List, thumbs up / down / love** | **More Like This** |
+| ![Details with thumbs](screenshots/details-thumbs.jpg) | ![More Like This](screenshots/more-like-this.jpg) |
+| **TV show page with season tabs** | **Actor page** |
+| ![Show page](screenshots/show-page.jpg) | ![Actor page](screenshots/actor-page.jpg) |
+| **Search** | **Who's watching? with avatars** |
+| ![Search](screenshots/search.jpg) | ![Profiles](screenshots/whos-watching.jpg) |
+| **Kids mode** | **Pause screen** |
+| ![Kids mode](screenshots/kids-mode.jpg) | ![Pause screen](screenshots/pause-screen.jpg) |
+| **Skip Intro** | **Audio & Subtitles** |
+| ![Skip Intro](screenshots/skip-intro.jpg) | ![Audio and subtitles](screenshots/audio-subtitles.jpg) |
+| **Quality badges on the details page** | **NEW badges** |
+| ![Quality badges](screenshots/quality-badges.jpg) | ![NEW badges](screenshots/new-badges.jpg) |
+| **Collection page** | **Screensaver** |
+| ![Collection](screenshots/collection.jpg) | ![Screensaver](screenshots/screensaver.jpg) |
+| **Music: now playing** | **Music: album** |
+| ![Now playing](screenshots/music-now-playing.jpg) | ![Album](screenshots/music-album.jpg) |
+| **Live TV guide** | **Live TV channels** |
+| ![TV guide](screenshots/tv-guide.jpg) | ![TV channels](screenshots/tv-channels.jpg) |
+| **Trailer preview in a home row** | **Because You Watched and Coming Soon** |
+| ![Row preview](screenshots/row-preview.jpg) | ![Because You Watched](screenshots/because-coming-soon.jpg) |
+| **Player bar: Finish by and Night mode** | **Search: people and the mic key** |
+| ![Finish by](screenshots/osd-watching.jpg) | ![People search](screenshots/search-people.jpg) |
+| **Movies filter chips** | **Your year** |
+| ![Filter chips](screenshots/movie-filters.jpg) | ![Your year](screenshots/your-year.jpg) |
+| **Christmas theme** | **Halloween theme** |
+| ![Christmas](screenshots/season-christmas.jpg) | ![Halloween](screenshots/season-halloween.jpg) |
+| **Start-up intro** | **Welcome setup** |
+| ![Intro](screenshots/startup-intro.jpg) | ![Welcome](screenshots/welcome.jpg) |
+| **Banner trailer, greeting and On now** | **Top 10 row** |
+| ![Banner trailer](screenshots/hero-greeting-on-now.jpg) | ![Top 10](screenshots/top10.jpg) |
+| **Ratings badges and the Family List button** | **Extras** |
+| ![Ratings](screenshots/details-ratings.jpg) | ![Extras](screenshots/extras.jpg) |
+| **Season progress and Mark season watched** | **After the movie** |
+| ![Season progress](screenshots/season-progress.jpg) | ![After the movie](screenshots/post-play.jpg) |
+| **Are you still watching?** | **Kids bedtime** |
+| ![Still watching](screenshots/still-watching.jpg) | ![Bedtime](screenshots/bedtime.jpg) |
+| **Colour from the artwork** | **Lyrics** |
+| ![Colour from the artwork](screenshots/art-colour.jpg) | ![Lyrics](screenshots/lyrics.jpg) |
+
+The screenshots come from a real Kodi instance running the skin against a small test library of made-up titles.
+
+## Features
+
+- **Welcome setup**: the first time the home screen opens, five quick steps set your colour, what you watch (which picks the home rows), the network cards and profiles (see [Welcome setup](#welcome-setup)).
+- **Start-up intro**: while Kodi loads you see a MediaHub splash, and then it comes alive: the logo pops with a burst of light in your accent colour and a short intro sound, and the home screen opens (see [Start-up intro](#start-up-intro)).
+- **Hero slider**: a full-width banner with backdrop, clear logo (or the title if there's no logo), year, genre, runtime, rating and plot. It rotates every 9 seconds and shows page dots. Stay on it and the title's **trailer plays silently** on its right. A **greeting** with your avatar sits on top (*Good evening*, *Up late*). Pressing Select opens the details page. In Skin Settings you can make it show random movies, recently added movies or random TV shows.
+- **Network cards**: a slider of cards under the hero, with 38 built-in networks and studios plus 20 custom slots. A card only appears when your library has movies or shows from it. Each card matches items whose *studio* (for movies) or *network* (for TV shows) contains one of two filter words. On the focused card, a light sweeps across every few seconds and the logo gently "breathes".
+- **Network hub**: selecting a card opens a page with the network's logo, its own hero slider, *All movies* and *All TV shows* buttons, a "New & Noteworthy" row, and rows for movies and TV shows.
+- **Home rows you choose**: up to 12 rows, each set to one of 53 row types and put in any order (see [Home rows](#home-rows)), including **Top 10** rows with big rank numbers, **Because You Watched**, **Coming Soon**, the **Family List** and mood rows like *Feel-Good Movies* and *Short on Time*. With Live TV there's also an **On now** row of what's on each channel. By default they are Continue Watching, Up Next, My List, Recommended For You, New Movies, New Episodes, TV Shows For You, Collections and Top Rated Movies. A row is hidden when it has nothing in it.
+- **Trailer previews**: stay on a movie in a home row for a few seconds and its trailer plays in a small panel at the top right, like Disney+ and Netflix. Moving on stops it (see [Trailer previews](#trailer-previews)).
+- **My List and thumbs**: add any movie or show to My List from its details page or the long-press menu, and rate it *Not for me*, *I like this* or *Love this!* (see [My List, thumbs and recommendations](#my-list-thumbs-and-recommendations)). **Recommended For You** learns from your thumbs.
+- **Up Next**: a row with the next episode of every show you're part-way through, most recently watched first. Selecting one plays it with the following episodes queued. In the last 30 seconds of an episode, a card in the corner shows which episode plays next.
+- **Side menu**: icons down the left edge that open up with labels when you focus them. It has Search, Home, **Surprise me**, Movies, TV Shows, Music, Live TV, Networks, Favourites, Add-ons, Files, **Your year**, Settings and Power (Music and Live TV appear once you have music or TV channels, **Now playing** appears while music plays, and **Downloads** once you've downloaded something).
+- **Search page**: a letter grid you can use with a TV remote (or the normal keyboard), with movies, TV shows, episodes and **people** (actors and directors) appearing as you type. The **mic key** opens the keyboard so you can talk instead: on Apple TV, hold the Siri Remote's mic button (see [Finding something](#finding-something)).
+- **Surprise me**: picks something you haven't watched, leaning towards what you like, and opens it.
+- **Filter chips on the Movies page**: All, Unwatched, 4K, Under 2 hours, Kids, and the 2020s, 2010s, 2000s, 1990s and older.
+- **TV show page**: opening a show gives a Disney+-style page with the backdrop and logo, a *Play* / *Continue S2 E1* button, My List and thumbs, season tabs with a bar showing how much of each season you've watched (*Season 2 • 7 of 10 watched*), a **Mark season watched** button, and the season's episodes with thumbnails and plots.
+- **Library views**: Posters, Landscape (good for episodes) and List with a details panel. A toolbar at the top has view, sort, order, watched filter, filter, search and update library.
+- **Details page**: backdrop, logo, **ratings badges** (IMDb, Rotten Tomatoes, Metacritic and TMDB, from your scraper), a Play button (or **Resume** and **Restart** for something you've started), trailer, My List and thumbs, extras/versions (Kodi 21+), set, director, choose art and refresh buttons, the plot, details, a cast row an **Extras** row (featurettes and deleted scenes in an *extras* folder next to the movie) and **More Like This**. After a few seconds the trailer starts playing behind the page (turn this off in Skin Settings). Selecting a cast member opens their **actor page**: every movie and show they're in, and what they directed. Selecting a movie in a home row opens its details page; a movie you're part-way through resumes straight away, and an episode plays from where you stopped with the next ones queued.
+- **Playback**: a player bar in your accent colour. On the left is the title's **clearart** (the picture with the characters and logo), or its logo, or the poster. Next to it: *Now playing*, the title, **badges** for the picture and sound (4K, HDR10 / Dolby Vision, Dolby Digital / Atmos / DTS, 5.1) and the audio and subtitle language, the progress bar you can scrub, and round buttons. There's also a seek bar, bookmarks, a subtitle download screen that works with any subtitle add-on (OpenSubtitles, Subdl and others from Kodi's repository), and:
+  - **Audio & Subtitles**: a Disney+-style panel (the speech-bubble button) listing every audio track (*English — Dolby Digital 5.1*) and subtitle, so you switch language in one press;
+  - a **pause screen**: pause for a moment and the picture dims behind "You're watching", the title's logo, the episode and the plot, like Netflix;
+  - **Skip Intro**, **Skip Recap** and **Skip Credits** buttons while a chapter named *Intro* / *Opening*, *Recap* / *Previously on* or *Credits* / *Outro* / *Ending* plays. They need chapter markers in the file (many rips have them). Skip Credits plays the next episode if one is queued. The button hides itself after 10 seconds, and Back dismisses it. Once you've skipped a show's intro, its later episodes **skip it by themselves**;
+  - **Finish by**: tell it when you want to stop ("11:30 PM", or "after this episode") and the next episode only starts if it will end in time;
+  - **Chapters**: a button that shows the file's chapters with a picture of each, and your bookmarks;
+  - **Sound modes**: *Night* (quieter, with quiet speech lifted) and *Dialogue boost* (clearer speech);
+  - a **sleep timer** that fades the sound out, **subtitle styles** (Large, Extra large, Yellow, Boxed), **Are you still watching?** after a few episodes on their own, and an **after the movie** page with thumbs and More Like This. See [While you watch](#while-you-watch).
+- **Badges**: **NEW** on movies and episodes added in the last two weeks, **NEW EPISODES** on a show you've started when more arrive, **4K** on cards, and the full set (4K, HDR, Dolby, 5.1) on the details page. The first scan of a library doesn't count, so a fresh library isn't all marked new.
+- **Collections**: Marvel, Star Wars, Harry Potter and other movie sets get a page with the backdrop and logo, how many films and the years, a **Play** button (it starts at the first one you haven't seen) and the films in release order. Open it from the **Collection** button on a movie's details page, the Collections home row, or a set in the movie library.
+- **Screensaver**: slowly zooming fanart with each title's logo, name, year and genre, and a clock (see [Screensaver](#screensaver)).
+- **Music**: an album-art grid, album pages with the track list, a queue, and a **now playing** screen with big album art on a soft colour wash of it (or the artist's fanart), the song, artist and album, progress, what's up next and the song's **lyrics**. Press OK for the controls: previous, play/pause, next, stop, shuffle, repeat, lyrics and the queue.
+- **Live TV**: a TV guide with channel logos, a "now" line and the focused programme's details at the top; a channel list with what's on now; recordings, timers and search; programme details; and, while watching, a channel list and the channel's guide over the picture (the guide button in the player bar). It works with any PVR add-on, for example IPTV Simple Client.
+- **Profiles**: a "Who's watching?" screen at start-up where every profile has a colourful **avatar** (pick your own in Skin settings), and a Profiles settings page. Each Kodi profile has its own watched progress, My List and settings (see [Profiles](#profiles)).
+- **Your year**: hours watched, movies, episodes, your most-watched show, your longest binge, top genres, busiest month and favourite movie of the year (see [Your year](#your-year)).
+- **Downloads** (not on Apple TV): save a movie or episode to watch without the network, for a laptop or tablet on the road (see [Downloads](#downloads)).
+- **Seasonal themes**: Christmas lights and snow in December, a Halloween garland in late October and summer sunshine, all by themselves (see [Seasonal themes](#seasonal-themes)).
+- **Kids mode**: only family-rated titles everywhere, protected by a PIN, with a **bedtime** that locks the screen until morning (see [Kids mode](#kids-mode)).
+- **Family List**: a watch-together list every profile shares (see [Family List](#family-list)).
+- **Backup and restore**: your settings, rows, network cards, My List and thumbs in one file (see [Backup and restore](#backup-and-restore)).
+- **Accent colours**: Disney+ blue, Netflix red, Prime cyan, slate, purple, gold or green, in **Skin settings → Accent colour**. **Colour from the artwork** tints the background with the colours of whatever you're on.
+- **Accessibility**: large text, a high-contrast theme and reduce motion (see [Accessibility](#accessibility)).
+- **The rest of Kodi's screens are skinned too**: settings, skin settings, add-on browser and add-on settings, file browser, add-source dialog, keyboard, number pad, select, confirm/progress, context menu, notifications, volume and the power menu.
+
+## Requirements
+
+- **Kodi 21 "Omega" or newer** (the skin needs `xbmc.gui` 5.17.0, so it also works on Kodi 22 "Piers").
+- A video library: add your movie/TV folders as sources, set their content type and scan them. Until you do, the home screen shows a welcome card with an **Add videos** button.
+
+## Install
+
+Works on Apple TV, Fire TV, Android TV, Windows, Mac, Linux and any other Kodi box.
+
+1. In Kodi, turn on **Settings → System → Add-ons → Unknown sources**.
+2. Go to **Settings → File manager → Add source**. Type the address below exactly, including `https://` and the final `/`, and name the source `mediahub`:
+   ```
+   https://satanlair2013-create.github.io/Mediahub-kodi/
+   ```
+3. Go to **Settings → Add-ons → Install from zip file → mediahub** and pick **`repository.mediahub-1.0.1.zip`**.
+4. Go to **Install from repository → MediaHub Repository → Look and feel → Skin → MediaHub → Install**. Say **Yes** to switching skins.
+
+Installing through the repository means Kodi also installs the **MediaHub Helper** add-on the skin needs, and keeps both up to date (see [Updates](#updates)). To install once without the repository, pick `script.mediahub.helper-<version>.zip` in step 3, then do step 3 again with `skin.mediahub-<version>.zip`.
+
+## Updates
+
+MediaHub checks for a new version a minute after Kodi starts and every 6 hours after that. When there is one, a banner appears at the top of the home screen with what's new and two buttons:
+
+- **Update now** installs it straight away through Kodi's own add-on installer. That works even if Kodi is set to only notify you about updates. If other add-ons have updates waiting too, it opens Kodi's **Available updates** list instead, so nothing else gets updated without you choosing it.
+- **Later** hides the banner until the next version comes out.
+
+If an update ever says it failed (MediaHub 1.6.0 and older could, see below), close Kodi completely, open it again and go to **Settings → Add-ons → My add-ons → Look and feel → Skin → MediaHub → Update**. Kodi's own add-on screen always works.
+
+**1.6.1 fixes "Update failed".** Before 1.6.1, **Update now** kept the helper busy watching the install while Kodi was replacing that same helper. Kodi then had to force-stop it, and the update failed or Kodi crashed. Now the button hands the update to Kodi and steps aside, and the new helper finishes up after Kodi restarts it. Updating *to* 1.6.1 from an older version opens Kodi's **Available updates** list (choose MediaHub or **Update all** there).
+
+You can also check any time in **Skin settings → Check for updates**, which shows the version you have. The check reads the MediaHub repository, so it needs `repository.mediahub` installed (the Apple TV / web install above) or falls back to the public site.
+
+## Title logos
+
+Wherever a title would be written out, the skin shows the movie's or show's **logo art** (Kodi calls it `clearlogo`) if it has one. That includes the hero slider, the Continue Watching and other 16:9 cards, episode cards (which use the show's logo), under the focused poster, the details page and the playback screens. If an item has no logo, the skin shows its name as text.
+
+To get logos for your library:
+
+1. Go to **Settings → Media → Videos** (set the settings level to *Advanced* or *Expert*) and set **Artwork level** to **Maximum**. That makes the scraper download logos along with posters and fanart.
+2. The default scrapers (*The Movie Database* for movies and TV) get logos from TMDB and, if it's turned on in their settings, from fanart.tv.
+3. For items you've already scanned: open an item's details page and choose **Refresh**, or remove the source from the library and scan it again.
+4. Or save a `clearlogo.png` next to a movie file (or in a TV show's folder), or name it `<movie file name>-clearlogo.png`, and Kodi picks it up as local artwork.
+
+## Network cards
+
+The card row under the hero slider is a slider: arrows show when there are more cards off-screen, and the next card peeks in at the right edge. It has **38 built-in networks and studios** plus **20 custom slots**. A card only appears when your library has something from it. Behind each card are two tiny hidden lists that check for a matching movie and a matching TV show. If neither finds anything, the card stays hidden, and if no card has any titles, the whole row hides. This works the same on the **Networks** page, which is in the side menu.
+
+Built-in cards: Disney, Pixar, Marvel, Star Wars, National Geographic, Star, Netflix, HBO, Apple TV+, Prime Video, Hulu, Paramount+, Peacock, Warner Bros., Universal, Sony Pictures, DreamWorks, Illumination, Studio Ghibli, Lionsgate, A24, Legendary, New Line Cinema, MGM, Blumhouse, BBC, AMC, Showtime, Starz, ABC, NBC, CBS, FOX, The CW, Syfy, Discovery, Cartoon Network and Nickelodeon.
+
+A card matches movies whose **studio**, or TV shows whose **network**, contains either of its two filter words. For example, Star matches `20th Century` or `FX`, and Star Wars matches `Lucasfilm` or `Star Wars`. The studio and network names come from your scraper, e.g. TMDB.
+
+### Editing cards
+
+Go to **Settings → Skin settings → Edit network cards**. Pick a card on the left; its settings show on the right:
+
+| Setting | What it does |
+| --- | --- |
+| Name | The name on the card and at the top of its hub. If you change it, the built-in logo is swapped for the name in text. |
+| Studio / network filter | The card matches items whose studio or network contains this text. |
+| Second filter (optional) | A second word to match. |
+| Logo image | Pick any PNG. White logos with a transparent background look best. |
+| Show name instead of logo / Hide this card / Reset this card | These do what they say. |
+
+The list also shows each card's status: *In your library*, *Nothing in your library*, *Hidden* or *Empty slot*. To add a network that isn't built in, give one of the **Custom slots** at the bottom a name and a filter.
+
+Skin Settings has two related options. **Show every network card, even empty ones** turns off the auto-hiding, and **Hide network cards** removes the row completely.
+
+The built-in card art is plain typography, not the studios' official logos. For real logos, the `resource.images.studios.white` add-on in Kodi's repository has them, and you can point a card's *Logo image* at one of its files.
+
+## Home rows
+
+Go to **Settings → Skin settings → Customise home rows**. The left column lists the 12 row positions and what each one shows. Pick a position, then choose a row type in the middle column. **Move row up** and **Move row down** reorder the selected row, and **Reset rows to default** puts everything back. Set a position to **None** to leave it out.
+
+Row types:
+
+- Continue Watching (movies), Continue Watching: TV, Up Next, My List, Recommended For You, New Movies, New Episodes, TV Shows For You, Collections
+- Top Rated Movies, Top Rated TV Shows, Watch Again (movies you've seen, most recent first), Movies You Haven't Seen, Random Movies
+- 16 movie genres (Action, Adventure, Animation, Comedy, Crime, Documentary, Drama, Family, Fantasy, Horror, Mystery, Romance, Science Fiction, Thriller, War, Western)
+- 10 TV genres (Action, Animation, Comedy, Crime, Documentary, Drama, Kids, Mystery, Reality, Sci-Fi)
+- **Because You Watched …**: titles like the last thing you finished (sharing its genres, studio or director) that you haven't seen. The row's name says what it's based on.
+- **Coming Soon**: episodes in your library whose air date hasn't come yet (Sonarr and some scrapers add upcoming episodes), one per show with the day it airs: *S2 E4 • Sunday*. It's empty if your library has none.
+- Mood rows: **Feel-Good Movies**, **Edge of Your Seat**, **Short on Time (Under 90 Minutes)** and **Watch Together**
+- **Top 10 Movies** and **Top 10 TV Shows**: the ten with the most votes on TMDB / IMDb, with big rank numbers beside the posters
+- **Family List**: the titles on the shared [Family List](#family-list)
+- 3 **custom rows**: give one a name and pick a playlist or smart playlist, and choose poster or wide cards. Make smart playlists in **Videos → Playlists**.
+
+Rows that have nothing in them stay hidden, so a genre row only shows once your library has something in it.
+
+More on the home screen:
+
+- **Banner trailer**: stay on the hero slider for 5 seconds and the title's trailer plays, muted, on the right of the banner, and the slider stops turning. The sound is turned back on when it ends (and when Kodi starts, if Kodi was closed while one played). **Skin settings → Play the trailer in the banner** turns it off.
+- **Greeting**: *Good morning*, *Good afternoon*, *Good evening* or *Up late*, with your avatar, above the banner. **Skin settings → Say good morning / evening on the home screen** turns it off.
+- **On now**: with Live TV set up, a row under the network cards shows each channel's programme, with its logo and a progress bar. Select one to watch. It's hidden in Kids mode, and **Skin settings → Show On now (Live TV) on the home screen** turns it off.
+- **Remove from Continue Watching**: long-press a movie you've started or a show you're part-way through (in the library, or a movie in Continue Watching) and choose **Remove from Continue Watching**. A movie loses its resume point; a show leaves Up Next until you watch another of its episodes. (Kodi doesn't open the long-press menu on Up Next's own cards, so for a show use its entry in the TV library.)
+
+### Trailer previews
+
+Stay on a movie in a home row for 4 seconds and its trailer plays in a panel at the top right, with the title's logo and a *Preview* tag. Moving on, opening something or pressing Back stops it, and a trailer that has finished doesn't start again for the same card. **Skin settings → Trailer previews in home rows** has three choices:
+
+- **Local trailers** (the default): trailers saved next to your movies (`<movie>-trailer.mkv`) or downloaded by your scraper as files.
+- **All trailers**: also YouTube trailers from the TMDB scraper. They need the YouTube add-on, and Kodi shows its busy spinner while one loads, which holds up the remote for a moment.
+- **Off**.
+
+## MediaHub Helper
+
+Up Next, My List, thumbs, Recommended For You, More Like This and the show page's Play button come from **MediaHub Helper** (`script.mediahub.helper`), a small add-on the skin installs alongside itself. It runs quietly in the background: the skin asks it for things and it fills them in. It also adds **Add to My List** and **Rate: thumbs up / down** to the long-press (context) menu on movies, shows and episodes.
+
+## Up Next
+
+For each TV show you've started, the helper finds the episode you stopped part-way through, or else the first unwatched episode after the last one you watched. Selecting a card plays that episode, resuming if you'd started it, with the next few episodes queued. Near the end of each episode, the **Up next** card shows the next one and counts down. Kodi then moves on to it by itself. To turn the card off, go to **Skin settings → Show an "Up next" card at the end of an episode**.
+
+The card only shows when another video is queued after the one playing. That's always the case when you start from Up Next. When you play an episode from the library, it depends on Kodi's **Settings → Player → Videos → Play next video automatically** option. The row refreshes whenever you come back to the home screen.
+
+## My List, thumbs and recommendations
+
+- **My List**: press **+** on a details page or the show page (or use the long-press menu) and the title goes to the top of the My List row. Press it again (it shows a tick) to take it off. My List is stored as a library tag called *My List*, so you can also filter by it in the library.
+- **Thumbs**: three buttons on the details page and show page, *Not for me*, *I like this* and *Love this!*. They're saved as the library's own *My rating* (2, 8 and 10 out of 10), so other skins and add-ons see them too. Pressing the same one again clears it.
+- **Recommended For You** ranks the movies you haven't watched by how well their genres, studios and directors match what you loved, liked and watched, and leaves out anything you gave a thumbs down. It reshuffles once a day.
+- **More Like This** on a details page lists titles that share genres, studio or director with it.
+
+## Profiles
+
+Kodi's profiles give each person their own watched status, Continue Watching, Up Next, My List, thumbs and settings.
+
+1. Go to **Settings → Profiles** and choose **Add profile…**. Give it a name and a picture, and pick whether it shares the library or has its own.
+2. On the same page, turn on **Show "Who's watching?" when Kodi starts**.
+3. To switch profile later, use **Power → Log off** in the side menu.
+
+Every profile gets an **avatar** on "Who's watching?": a colourful picture that goes with its place in the list, or one you pick in **Skin settings → Profile avatar** (there are 12). A profile picture set in Kodi's own profile settings is used if you haven't picked an avatar. Your avatar also shows on the **Your year** page. (Kodi only lets the "Who's watching?" screen read the main profile's skin settings, so MediaHub keeps every profile's pick there.)
+
+If a new profile keeps its own add-ons, turn on **MediaHub Helper** in it too (**Settings → Add-ons → My add-ons → Services**).
+
+## Kids mode
+
+Turn it on in **Skin settings → Kids mode**. While it's on:
+
+- the hero slider, home rows, network cards and hubs, search, actor pages and the side menu's **Movies** and **TV Shows** only show titles rated **G, PG, U, TV-Y, TV-Y7, TV-G or TV-PG**. The rating comes from your scraper; titles without one are left out.
+- Continue Watching: TV, New Episodes and Collections are hidden (Up Next still shows kids' shows).
+- **Settings**, **Add-ons** and **Files** disappear from the side menu, and **Exit Kids mode** appears.
+
+Set a **Kids mode PIN** first (in Skin settings, while Kids mode is off) and leaving Kids mode asks for it.
+
+**Bedtime**: in **Skin settings → Kids bedtime**, set a bedtime and a wake-up time. In Kids mode, a note says *Bedtime in 10 minutes*; at bedtime, whatever is playing gets ten more minutes (or stops at its end, if that's sooner), then a **Time for bed** screen covers everything until the wake-up time. It comes back if someone closes it. **Grown-ups** on that screen asks for the Kids mode PIN and unlocks it for the rest of the night. Leaving Kids mode ends it too.
+
+## Family List
+
+A watch-together list for the whole house. The people button on a movie's or show's details page adds it (it fills in once it's on the list; press it again to take it off). Every profile sees the same list: it's kept in the main profile's data, and each title is matched to your own library by its IMDb / TMDB / TVDB id, or its title and year. Show it on the home screen with the **Family List** row type ([Home rows](#home-rows)); the Kids and family choice in the welcome setup includes it.
+
+## Backup and restore
+
+**Skin settings → Back up MediaHub to a file** saves your skin settings (home rows, network cards, colours and every switch), My List and thumbs to `MediaHub backup <date>.json` in a folder you pick. Pick a network folder and you can take it to another device. **Restore from a backup** puts it all back: settings the backup doesn't have go back to their defaults, and My List and thumbs are matched to the library by id or title and year, so they carry across to a device with the same films. The helper's own lists (the order of My List, shows hidden from Up Next, remembered intros) are restored only to the same library.
+
+## Screensaver
+
+Turn it on in **Skin settings → MediaHub screensaver**, and pick when it starts (2, 5, 10, 15 or 30 minutes without a button press). It shows your movies and shows while nothing is playing, and any button wakes it up. Turning it on switches Kodi's own screensaver off (turning it off puts Kodi's *Dim* back), so the two don't overlap. In Kids mode it only shows family titles.
+
+## While you watch
+
+The player bar has four new round buttons: **Audio & Subtitles**, **Chapters**, **Finish by** and **Sound mode**. What's on shows under the clock (*Finish by: 11:30 PM • Sound: Night*).
+
+- **Finish by**: pick *After this episode* or a time (every half hour for the next 5 hours). Up Next leaves out episodes that wouldn't finish in time, and when an episode ends, the next one only plays if it fits; otherwise playback stops and a message says so. It switches itself off once the time has passed.
+- **Chapters**: every chapter in the file with a picture from it and its time, plus your bookmarks. Select one to jump there.
+- **Intro memory**: press **Skip Intro** once in a show and from then on its intros are skipped for you (a short message says so). To turn this off, go to **Skin settings → Skip intros automatically in shows where you've skipped one**; **Offer Skip Intro again in every show** forgets the shows it remembers.
+- **Sleep timer** (the timer button): *Stop after this one* or *Sleep in* 15 to 90 minutes. In the last minute the sound fades out and the picture dims, then it stops and the volume goes back to where it was. Pressing any button during the fade cancels it. **Finish by** is in the same menu.
+- **Subtitle style** (in Audio & Subtitles): *Standard*, *Large*, *Extra large*, *Yellow* or *Boxed* (white on a dark box, the easiest to read). It sets Kodi's own subtitle settings, so it sticks.
+- **Are you still watching?**: after three episodes in a row with no button pressed, the next one pauses and asks. *Continue watching* carries on; *Stop* stops. **Skin settings → Ask "Are you still watching?" after 3 in a row** turns it off.
+- **After the movie**: when a film ends (or you stop it near the end), a page shows its logo, asks *How was it?* with the thumbs, and lists More Like This. **Skin settings → Show rating and More Like This after a movie** turns it off.
+- **Sound modes**: **Night** lowers the volume and adds some of Kodi's volume amplification, so quiet speech stays clear while explosions don't wake anyone. **Dialogue boost** only adds the amplification. **Normal** puts everything back. Amplification doesn't work when your receiver decodes the sound itself (passthrough), so on those setups Night just lowers the volume. Picture presets aren't possible: Kodi doesn't let skins change the TV's picture.
+
+## Finding something
+
+- **People search**: the search page's **People** row lists the actors and directors whose names contain what you typed, from your movies and TV shows. Select one to see everything they're in and what they directed.
+- **Mic key**: the first key under the letter grid opens the keyboard with a hint to talk. On Apple TV, hold the mic button on the Siri Remote and say a title (it needs Kodi's Apple TV keyboard, the default, and dictation turned on in the Apple TV's settings). Phones and other remotes with voice typing work the same way.
+- **Surprise me**: in the side menu. It picks a movie or show you haven't watched (skipping thumbs-down titles, and only family titles in Kids mode). What you like makes a title more likely, but it's still a surprise.
+- **Filter chips**: above the Movies page. *All*, *Unwatched*, *4K*, *Under 2 hours*, *Kids*, *2020s*, *2010s*, *2000s*, *1990s* and *Older*. The one you're on is lit, and **..** goes back up as usual.
+
+## Details page extras
+
+- **Ratings badges**: IMDb (7.8), Rotten Tomatoes (92%, a tomato or a green splat), Metacritic (76, green, yellow or red like theirs) and TMDB (78%). They come from the ratings your scraper saved; the TMDb scraper gets Rotten Tomatoes and Metacritic when its *OMDb* option is on (it needs a free OMDb key).
+- **Extras**: put featurettes, deleted scenes or interviews in a folder called `extras` (or `featurettes`, `behind the scenes`, `deleted scenes`, `interviews`, `scenes`, `shorts`, `trailers`, `other`) next to the movie, or in the show's folder. They appear in an **Extras** row; a picture with the same name as the video (or `name-thumb.jpg`) is its thumbnail, otherwise the movie's backdrop is used.
+- **Season progress**: on a show page every season tab has a bar showing how much of it you've watched, and *Season 2 • 7 of 10 watched* shows next to the round buttons. The tick button marks the whole season watched, or unwatched if it all is.
+
+## Your year
+
+**Your year** in the side menu (or in Skin settings) looks back at this year: hours watched, how many movies, episodes and shows, your most-watched show, your longest binge (*5 episodes of Outer Rim • 24 September*), your top genres, your busiest month and your favourite movie (the one you rated highest). It's worked out from when you last watched each thing, so a movie you watched twice counts once.
+
+## Downloads
+
+On Mac, Windows, Linux and Android (not Apple TV, where the system can delete big files at any time), movie and episode details pages have a **Download** button. It copies the file to your downloads folder with a progress bar in the corner, so you can watch it without the network. **Downloads** then appears in the side menu. To remove one, long-press it there and choose **Remove download**. Pick the folder in **Skin settings → Downloads folder** (by default it's in Kodi's own data folder). Streams from add-ons can't be downloaded.
+
+## Seasonal themes
+
+The home screen and "Who's watching?" dress up by themselves:
+
+- **Christmas** (1–26 December): twinkling lights along the top and falling snow.
+- **Halloween** (15–31 October): a garland of pumpkins and bats, and a cobweb in the corner.
+- **Summer** (21 June – 31 August): a warm sun with slowly turning rays in the corner.
+
+**Skin settings → Seasonal themes** turns them off, or picks one to use all year.
+
+## Welcome setup
+
+The first time the home screen opens (in each profile), MediaHub asks five quick things: your colour; what you watch most (*A bit of everything*, *Mostly movies*, *Mostly TV shows* or *Kids and family*, which sets the home rows); whether to show network cards and which; and a shortcut to Kodi's profiles. **Skip** leaves everything as it is. Run it again from **Skin settings → Run the welcome setup again**.
+
+## Accessibility
+
+In **Skin settings → Accessibility**:
+
+- **Text size**: *Large* makes everyday text (descriptions, details, buttons and labels) about a fifth bigger and headings a little bigger. It's Kodi's font setting, so it's also in **Settings → Interface → Skin → Fonts**.
+- **High contrast**: black backgrounds, brighter text and edges and a stronger blue. It's a colour theme, so it takes the place of the accent colour.
+- **Reduce motion**: no falling snow or twinkling lights, no light sweeping across network cards, no breathing logos, no zoom on the focused card and no slowly moving backgrounds.
+
+**Colour from the artwork** (in the Look section) tints the background of the library, home screen and other pages with the colours of the focused title's backdrop, blown up until only its colours are left.
+
+## Lyrics
+
+On the music now-playing screen, press OK and choose the **Lyrics** button. The song's lyrics (from its tags) take the lower half of the screen and scroll by themselves; press it again to hide them. If a song has no lyrics and the **CU LRC Lyrics** add-on (`script.cu.lrclyrics`) is installed, the button opens it instead, to find them online.
+
+## Start-up intro
+
+When Kodi starts it first shows its loading splash. MediaHub replaces Kodi's with its own: the logo on a glow in the accent blue. When the skin takes over, the same picture comes alive in time with a short sound (a swoosh into a warm chord): the logo pops, a ring of light spreads out and rays burst behind it, then the home screen opens. It takes about 4 seconds, and any button skips it.
+
+- **Skin settings → Intro when Kodi starts** turns it off (and puts Kodi's own splash back). **Intro sound** keeps the pictures but drops the sound.
+- The sound goes through Kodi's interface sounds, so it's silent if **Settings → Interface → Sounds** is off, and it never shows as "now playing".
+- The MediaHub splash is shown from the second start after installing, because the helper copies it into Kodi's folder (`special://home/media/splash.png`) once it runs. If you switch to another skin it takes it away again. If you've put a splash of your own there (`splash.jpg`, or your own `splash.png`), it's left alone.
+- With **Show "Who's watching?"** on, Kodi goes straight to that screen and the intro doesn't play.
+- Without the helper, the intro still plays after a moment, just silently.
