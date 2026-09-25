@@ -230,6 +230,8 @@ Stay on a movie in a home row for 4 seconds and its trailer plays in a panel at 
 
 - **Local trailers** (the default): trailers saved next to your movies (`<movie>-trailer.mkv`) or downloaded by your scraper as files.
 - **All trailers**: also YouTube trailers from the TMDB scraper. They need the YouTube add-on, and Kodi shows its busy spinner while one loads, which holds up the remote for a moment.
+
+YouTube trailers need Kodi's **YouTube** add-on. When it isn't installed, previews simply skip those trailers, and the **Trailer** button on a details page (or **Play trailer** in the long-press menu) offers to install it from Kodi's own repository. (YouTube may then ask you to set up its own API key: see its settings.)
 - **Off**.
 
 ## MediaHub Helper
@@ -377,14 +379,17 @@ Only use a service you are licensed to watch.
 **Get it**: **Skin settings → IPTV (Xtream Codes) → Get MediaHub IPTV** (or **Add-ons → Install from repository → MediaHub Repository → Video add-ons → MediaHub IPTV**). Then **Sign in to your IPTV service** with the server address, username and password your provider gave you (a pasted playlist address works too: the server is taken from it). **IPTV** appears in the side menu.
 
 - **Live TV**: your service's categories, each channel with what's on now (and its times) and next. Hold OK on a channel for its **programme guide** and, where your service keeps them, **catch-up**. MPEG-TS or HLS streams (**MediaHub IPTV settings**).
+- **Start over**: on a channel with catch-up, start the programme that's on now from its beginning: from the channel's long-press menu, the guide, or the **Start over** button in the player bar while you watch. **Back to live** (in the same place) returns to the live picture.
+- **My channels**: hold OK on a channel and choose **Add to My channels**. They get their own page at the top of MediaHub IPTV and an **IPTV: My Channels** row on the home screen (under My Channels), with what's on now, a progress bar and what's next, brought up to date every minute.
 - **Catch-up**: the channels your service records, by day (today, yesterday and back as far as it keeps), then the programme.
 - **Movies** and **Series**: by category, with the service's own posters, backdrops, plots, cast, ratings and trailers (a film's details arrive a moment after the page opens). A series opens its seasons and episodes.
 - **Continue Watching**: what you're part-way through resumes (or *Play from beginning*), watched titles get a tick, and playing an episode queues the next ones, so Up Next offers them. A finished episode puts the next one here.
+- **New episodes**: when a series you've caught up with gets more episodes, the next one appears in Continue Watching and the series gets a **NEW EPISODES** badge (the list is checked once a day).
 - **Recently added** films and series, and **Search** across channels, films and series. These use a list of everything on your service, which the add-on reads once a day in the background, a category at a time.
 - **Account**: status, expiry date and connections in use, and **Sign out**.
 - **Use with Kodi's Live TV**: the playlist and guide addresses for IPTV Simple Client (see [Xtream Codes services](#xtream-codes-services)).
 - **Hide categories** (at the end of each category list): leave out the ones you don't want. Adult-looking categories are hidden until you choose, and with a Kids mode PIN set, changing the list asks for it. In **Kids mode** only children's categories show (Kids, Family, Cartoons, Animation, Disney…), in the pages, search and home rows.
-- **Home rows** (**Customise home rows**): **Continue Watching: IPTV**, **IPTV: New Movies** and **IPTV: New Series**.
+- **Home rows** (**Customise home rows**): **Continue Watching: IPTV**, **IPTV: New Movies** and **IPTV: New Series**; and **IPTV: My Channels** by itself once you add a channel.
 
 The add-on doesn't come with any channels, films or series: it plays what your own service offers. Only use a service you are licensed to watch.
 
