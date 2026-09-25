@@ -75,12 +75,12 @@ The screenshots come from a real Kodi instance running the skin against a small 
 - **Hero slider**: a full-width banner with backdrop, clear logo (or the title if there's no logo), year, genre, runtime, rating and plot. It rotates every 9 seconds and shows page dots. Stay on it and the title's **trailer plays silently** on its right. A **greeting** with your avatar sits on top (*Good evening*, *Up late*). Pressing Select opens the details page. In Skin Settings you can make it show random movies, recently added movies or random TV shows.
 - **Network cards**: a slider of cards under the hero, with 38 built-in networks and studios plus 20 custom slots. A card only appears when your library has movies or shows from it. Each card matches items whose *studio* (for movies) or *network* (for TV shows) contains one of two filter words. On the focused card, a light sweeps across every few seconds and the logo gently "breathes".
 - **Network hub**: selecting a card opens a page with the network's logo, its own hero slider, *All movies* and *All TV shows* buttons, a "New & Noteworthy" row, and rows for movies and TV shows.
-- **Home rows you choose**: up to 12 rows, each set to one of 56 row types and put in any order (see [Home rows](#home-rows)), including **Top 10** rows with big rank numbers, **Because You Watched**, **Coming Soon**, **New This Week**, **Directed By …**, **Marvel in Story Order**, the **Family List**, mood rows like *Feel-Good Movies* and *Short on Time*, and rows from **any add-on's folder**. Hold OK on a row's card to **move or hide the row**. With Live TV there are also **My Channels** (the channels you pick) and **On now** rows. After time away, a **New since you were last here** banner lists what was added. By default they are Continue Watching, Up Next, My List, Recommended For You, New Movies, New Episodes, TV Shows For You, Collections and Top Rated Movies. A row is hidden when it has nothing in it.
+- **Home rows you choose**: up to 12 rows, each set to one of 57 row types and put in any order (see [Home rows](#home-rows)), including **Top 10** rows with big rank numbers, **Because You Watched**, **Coming Soon**, **New This Week**, **Directed By …**, **Marvel in Story Order**, the **Family List**, mood rows like *Feel-Good Movies* and *Short on Time*, and rows from **any add-on's folder**. Hold OK on a row's card to **move or hide the row**. With Live TV there are also **My Channels** (the channels you pick), **On now** and two rows of a **channel group** you choose (Sports, News). **Continue Watching: On Demand** has what you're part-way through from an IPTV catalogue. After time away, a **New since you were last here** banner lists what was added. By default they are Continue Watching, Up Next, My List, Recommended For You, New Movies, New Episodes, TV Shows For You, Collections and Top Rated Movies. A row is hidden when it has nothing in it.
 - **Trailer previews**: stay on a movie in a home row for a few seconds and its trailer plays in a small panel at the top right, like Disney+ and Netflix. Moving on stops it (see [Trailer previews](#trailer-previews)).
 - **My List and thumbs**: add any movie or show to My List from its details page or the long-press menu, and rate it *Not for me*, *I like this* or *Love this!* (see [My List, thumbs and recommendations](#my-list-thumbs-and-recommendations)). **Recommended For You** learns from your thumbs.
 - **Up Next**: a row with the next episode of every show you're part-way through, most recently watched first. Selecting one plays it with the following episodes queued. In the last 30 seconds of an episode, a card in the corner shows which episode plays next.
 - **Side menu**: icons down the left edge that open up with labels when you focus them. It has Search, Home, **Surprise me**, Movies, TV Shows, **Calendar**, Music, Live TV, **On demand**, Networks, Favourites, Add-ons, Files, **Your year**, Settings and Power (Music and Live TV appear once you have music or TV channels, **Now playing** appears while music plays, and **Downloads** once you've downloaded something).
-- **Search page**: a letter grid you can use with a TV remote (or the normal keyboard), with movies, TV shows, episodes and **people** (actors and directors) appearing as you type. The **mic key** opens the keyboard so you can talk instead: on Apple TV, hold the Siri Remote's mic button (see [Finding something](#finding-something)).
+- **Search page**: a letter grid you can use with a TV remote (or the normal keyboard), with movies, TV shows, episodes, **people** (actors and directors), **On demand** shows and films and **Live TV channels** from your IPTV playlist appearing as you type. The **mic key** opens the keyboard so you can talk instead: on Apple TV, hold the Siri Remote's mic button (see [Finding something](#finding-something)).
 - **Surprise me**: picks something you haven't watched, leaning towards what you like, and opens it.
 - **Filter chips on the Movies page**: All, Unwatched, 4K, Under 2 hours, Kids, and the 2020s, 2010s, 2000s, 1990s and older.
 - **TV show page**: opening a show gives a Disney+-style page with the backdrop and logo, a *Play* / *Continue S2 E1* button, My List and thumbs, season tabs with a bar showing how much of each season you've watched (*Season 2 • 7 of 10 watched*), a **Mark season watched** button, and the season's episodes with thumbnails and plots.
@@ -93,13 +93,14 @@ The screenshots come from a real Kodi instance running the skin against a small 
   - **Finish by**: tell it when you want to stop ("11:30 PM", or "after this episode") and the next episode only starts if it will end in time;
   - **Chapters**: a button that shows the file's chapters with a picture of each, and your bookmarks;
   - **Sound modes**: *Night* (quieter, with quiet speech lifted) and *Dialogue boost* (clearer speech);
+  - **each show remembers its languages**: switch a show to French audio or turn its subtitles off once, and its next episodes start the same way;
   - a **sleep timer** that fades the sound out, **subtitle styles** (Large, Extra large, Yellow, Boxed), **Are you still watching?** after a few episodes on their own, and an **after the movie** page with thumbs and More Like This. See [While you watch](#while-you-watch).
 - **Badges**: **NEW** on movies and episodes added in the last two weeks, **NEW EPISODES** on a show you've started when more arrive, **4K** on cards, and the full set (4K, HDR, Dolby, 5.1) on the details page. The first scan of a library doesn't count, so a fresh library isn't all marked new.
 - **Collections**: Marvel, Star Wars, Harry Potter and other movie sets get a page with the backdrop and logo, how many films and the years, a **Play** button (it starts at the first one you haven't seen) and the films in release order. Open it from the **Collection** button on a movie's details page, the Collections home row, or a set in the movie library.
-- **Screensaver**: slowly zooming fanart with each title's logo, name, year and genre, and a clock (see [Screensaver](#screensaver)).
+- **Screensaver**: slowly zooming fanart with each title's logo, name, year and genre, or a **big clock**, both with **today's weather** (see [Screensaver](#screensaver)).
 - **Music**: an album-art grid, album pages with the track list, a queue, and a **now playing** screen with big album art on a soft colour wash of it (or the artist's fanart), the song, artist and album, progress, what's up next and the song's **lyrics**. Press OK for the controls: previous, play/pause, next, stop, shuffle, repeat, lyrics and the queue.
-- **Live TV**: **My Channels** on the home screen, a **mini guide** (channel, now with progress, next) when you press Info while watching, a TV guide with channel logos, a "now" line and the focused programme's details at the top; a channel list with what's on now; recordings, timers and search; programme details; and, while watching, a channel list and the channel's guide over the picture (the guide button in the player bar). It works with any PVR add-on, for example IPTV Simple Client.
-- **On demand**: an IPTV video-on-demand playlist as **TV shows (by season) and movies**, A-Z with search, read straight from the playlist instead of loading it into Live TV (see [On demand](#on-demand)).
+- **Live TV**: **My Channels** on the home screen, a **mini guide** (channel, now with progress, next) when you press Info while watching, a TV guide with channel logos, a "now" line and the focused programme's details at the top; a channel list with what's on now; recordings, timers and search; programme details; and, while watching, a channel list and the channel's guide over the picture (the guide button in the player bar). A **last channel** button in the player bar flips back to the channel you watched before, and two home rows can each show a **channel group** such as Sports or News. It works with any PVR add-on, for example IPTV Simple Client, including Xtream Codes services (see [Live TV extras](#live-tv-extras)).
+- **On demand**: an IPTV video-on-demand playlist as **TV shows (by season) and movies**, A-Z with search, read straight from the playlist instead of loading it into Live TV, with **posters and plots**, **resume** and the **next episode**, and groups you'd rather not see hidden behind the Kids mode PIN (see [On demand](#on-demand)).
 - **Calendar**: the next two weeks of episodes for the shows in your library, day by day (see [Calendar](#calendar)).
 - **Quick menu**: holding OK (the context menu) shows what it's for at the top, with Play, Play trailer, Mark as watched, My List and the rest.
 - **Profiles**: a "Who's watching?" screen at start-up where every profile has a colourful **avatar** (pick your own in Skin settings), and a Profiles settings page. Each Kodi profile has its own watched progress, My List and settings (see [Profiles](#profiles)).
@@ -112,6 +113,7 @@ The screenshots come from a real Kodi instance running the skin against a small 
 - **Accent colours**: Disney+ blue, Netflix red, Prime cyan, slate, purple, gold or green, in **Skin settings → Accent colour**. **Colour from the artwork** tints the background with the colours of whatever you're on.
 - **Lite mode** for Apple TV and other boxes short of memory: six home rows and no trailers or moving effects, with a memory reading; it turns itself on if memory runs low (see [Lite mode](#lite-mode)).
 - **Pure black background** for OLED screens, with any accent colour.
+- **Free up space**: Kodi's picture cache size, and clearing the pictures not used for a month (see [Storage](#storage)).
 - **Library health**: what's missing artwork, in the library twice, or wasn't identified (see [Library health](#library-health)).
 - **Trakt**: set up the Trakt add-on and sync from Skin settings (see [Trakt](#trakt)).
 - **Languages**: English, German, Spanish, French, Italian and Brazilian Portuguese, following Kodi's language setting.
@@ -281,6 +283,9 @@ A watch-together list for the whole house. The people button on a movie's or sho
 
 Turn it on in **Skin settings → MediaHub screensaver**, and pick when it starts (2, 5, 10, 15 or 30 minutes without a button press). It shows your movies and shows while nothing is playing, and any button wakes it up. Turning it on switches Kodi's own screensaver off (turning it off puts Kodi's *Dim* back), so the two don't overlap. In Kids mode it only shows family titles.
 
+- **Screensaver style**: *Pictures from your library*, or *Big clock*: a large clock, the date and the weather on black, drifting slowly so nothing marks the screen. (A library with no backdrops yet gets the clock too.)
+- **Weather**: set **Skin settings → Weather for** to your town (*Leeds*, or *Leeds, UK* when there are several) and both styles show the temperature, what it's like and today's high and low, from [Open-Meteo](https://open-meteo.com) (free, no account), in °C or °F following Kodi's region setting. It's only looked up while the screensaver shows, at most every half hour. If Kodi has a weather add-on set up (**Settings → Services → Weather**), that one is used instead and the town setting hides.
+
 ## While you watch
 
 The player bar has four new round buttons: **Audio & Subtitles**, **Chapters**, **Finish by** and **Sound mode**. What's on shows under the clock (*Finish by: 11:30 PM • Sound: Night*).
@@ -292,6 +297,7 @@ The player bar has four new round buttons: **Audio & Subtitles**, **Chapters**, 
 - **Subtitle style** (in Audio & Subtitles): *Standard*, *Large*, *Extra large*, *Yellow* or *Boxed* (white on a dark box, the easiest to read). It sets Kodi's own subtitle settings, so it sticks.
 - **Are you still watching?**: after three episodes in a row with no button pressed, the next one pauses and asks. *Continue watching* carries on; *Stop* stops. **Skin settings → Ask "Are you still watching?" after 3 in a row** turns it off.
 - **After the movie**: when a film ends (or you stop it near the end), a page shows its logo, asks *How was it?* with the thumbs, and lists More Like This. **Skin settings → Show rating and More Like This after a movie** turns it off.
+- **Each show remembers its languages**: change the audio language or the subtitles (in Audio & Subtitles, or Kodi's own menu) and the show's next episodes start with the same audio language and the same subtitles, or none. Only a change you make is kept, so shows you never touch follow Kodi's language settings. **Skin settings → Each show remembers its audio language and subtitles** turns it off.
 - **Sound modes**: **Night** lowers the volume and adds some of Kodi's volume amplification, so quiet speech stays clear while explosions don't wake anyone. **Dialogue boost** only adds the amplification. **Normal** puts everything back. Amplification doesn't work when your receiver decodes the sound itself (passthrough), so on those setups Night just lowers the volume. Picture presets aren't possible: Kodi doesn't let skins change the TV's picture.
 
 ## Finding something
@@ -299,6 +305,7 @@ The player bar has four new round buttons: **Audio & Subtitles**, **Chapters**, 
 - **People search**: the search page's **People** row lists the actors and directors whose names contain what you typed, from your movies and TV shows. Select one to see everything they're in and what they directed.
 - **Mic key**: the first key under the letter grid opens the keyboard with a hint to talk. On Apple TV, hold the mic button on the Siri Remote and say a title (it needs Kodi's Apple TV keyboard, the default, and dictation turned on in the Apple TV's settings). Phones and other remotes with voice typing work the same way.
 - **Surprise me**: in the side menu. It picks a movie or show you haven't watched (skipping thumbs-down titles, and only family titles in Kids mode). What you like makes a title more likely, but it's still a surprise.
+- **On demand and Live TV in search**: with an [On demand](#on-demand) playlist, the search page also has rows of its **shows and films** and its **live channels** whose names match. A show opens its seasons; a film or channel plays.
 - **Filter chips**: above the Movies page. *All*, *Unwatched*, *4K*, *Under 2 hours*, *Kids*, *2020s*, *2010s*, *2000s*, *1990s* and *Older*. The one you're on is lit, and **..** goes back up as usual.
 
 ## Details page extras
@@ -332,6 +339,9 @@ Some IPTV playlists are really catalogues: every episode and every film is an en
 - It uses **Skin settings → On demand → Playlist address** (a web address or a file), or else IPTV Simple Client's own playlist, **whether or not that add-on is on**. So with a big catalogue you can turn IPTV Simple Client off (**Add-ons → My add-ons → PVR clients**) to free the memory, and still watch through On demand.
 - **Update the list now** reads the playlist again (it takes a minute for a big one); the list also refreshes by itself once a day while nothing is playing. Skin settings shows how many shows, episodes and movies it found.
 - An entry named like *Show S01 E02* (or *S01E02*, *1x02*) is an episode; one whose address is a video file or an Xtream `/movie/` address is a film; everything else is a live channel and is left to Live TV. Language tags in front (*EN - …*, *|UK| …*) are ignored.
+- **Resume and next episode**: what you've watched gets a tick and what you've started resumes (or *Play from beginning*, holding OK). Playing an episode queues the next few, so the Up Next card offers the next one, and the home row **Continue Watching: On Demand** has what you're part-way through and the next episode of shows you're following. Progress is kept by address, so it survives the daily refresh.
+- **Posters and plots**: shows are looked up on [TVmaze](https://www.tvmaze.com) (free, no account) for a poster, a backdrop and the plot; films on [TMDB](https://www.themoviedb.org) once you put a free TMDB API key in **Skin settings → On demand → TMDB API key**. It happens in the background a page at a time; a show's own page looks it up straight away.
+- **Hide playlist groups**: **Skin settings → On demand → Hide playlist groups** ticks the playlist's groups (categories) to leave out of On demand and search. Groups that look like adult ones are hidden to start with, and with a Kids mode PIN set, changing the list asks for it.
 
 ## Calendar
 
@@ -341,6 +351,26 @@ Some IPTV playlists are really catalogues: every episode and every film is an en
 
 - **My Channels**: hold OK on a channel in Live TV and choose **My channels: add / remove**. The home screen gets a row of your channels with what's on now, a progress bar and what's next. To take one off, do the same in Live TV (Kodi doesn't open the long-press menu on the row's own cards).
 - **Mini guide**: press Info while watching a channel for its logo and number, what's on now (with the times and how far in) and what's next. Up / Down change channel.
+- **Last channel**: while watching Live TV, the back-arrow button in the player bar goes to the channel you watched before, and pressing it again comes back.
+- **Channel group rows**: **Skin settings → Live TV → Home row of a channel group** (and a second one) puts a group from your channel list, like *Sports* or *News*, on the home screen with what's on now and next. *All channels* isn't offered, and a group of more than 1000 channels is refused, so a huge IPTV list can't be loaded onto the home screen.
+- **Reminders**: in the TV guide, open a programme and choose **Set reminder**; when it starts, Kodi asks whether to switch to it.
+- **Catch-up**: if your IPTV service offers it, turn **Catchup** on in IPTV Simple Client's settings (**Skin settings → Live TV → Catch-up and IPTV settings** opens them). Past programmes in the guide then play with **Play programme**.
+
+### Xtream Codes services
+
+Kodi has no Xtream Codes add-on of its own; **IPTV Simple Client** reads an Xtream service through the playlist and guide addresses every Xtream service gives out. With your provider's server address, username and password:
+
+1. **Add-ons → Install from repository → PVR clients → PVR IPTV Simple Client**, install and enable it.
+2. In its settings (**Skin settings → Live TV → Catch-up and IPTV settings**), **General → M3U playlist URL**: `http://SERVER:PORT/get.php?username=USER&password=PASS&type=m3u_plus&output=ts`
+3. **EPG → XMLTV URL**: `http://SERVER:PORT/xmltv.php?username=USER&password=PASS`
+4. **Catchup → Enable catchup** if your service has it (Xtream catch-up is recognised from the playlist by itself).
+5. Restart Kodi. Channels are in Live TV; films and series from the same playlist are easiest in **On demand**, which reads that playlist without loading it all into Live TV. If the playlist is huge (hundreds of thousands of entries) and Kodi struggles, turn IPTV Simple Client off (**Add-ons → My add-ons → PVR clients**): On demand keeps reading its playlist address.
+
+Only use a service you are licensed to watch.
+
+## Storage
+
+**Skin settings → Storage → Picture cache** shows how much room Kodi's saved pictures (and old add-on downloads) take, and how many pictures there are. Kodi keeps a copy of every poster, backdrop and logo it has ever shown and never lets go of them, which adds up on a box with little storage like Apple TV. **Clear pictures not used for a month** removes those (through Kodi, so its picture list stays right) and the old add-on download zips; anything still in use is simply fetched again the next time it's shown.
 
 ## Lite mode
 
