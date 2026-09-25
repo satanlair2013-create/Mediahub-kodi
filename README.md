@@ -134,7 +134,7 @@ If an update ever says it failed (MediaHub 1.6.0 and older could, see below), cl
 
 **1.6.1 fixes "Update failed".** Before 1.6.1, **Update now** kept the helper busy watching the install while Kodi was replacing that same helper. Kodi then had to force-stop it, and the update failed or Kodi crashed. Now the button hands the update to Kodi and steps aside, and the new helper finishes up after Kodi restarts it. Updating *to* 1.6.1 from an older version opens Kodi's **Available updates** list (choose MediaHub or **Update all** there).
 
-You can also check any time in **Skin settings → Check for updates**, which shows the version you have. The check reads the MediaHub repository, so it needs `repository.mediahub` installed (the Apple TV / web install above) or falls back to the public site.
+You can also check any time in **Skin settings → Check for updates**, which shows the version you have. (Before helper 1.6.2 it always said *Couldn't check - are you online?* on the public site, which sends its list of versions compressed; Kodi's own update check was not affected.) The check reads the MediaHub repository, so it needs `repository.mediahub` installed (the Apple TV / web install above) or falls back to the public site.
 
 ## Title logos
 
