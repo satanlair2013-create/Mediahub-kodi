@@ -59,6 +59,12 @@
 | ![Still watching](screenshots/still-watching.jpg) | ![Bedtime](screenshots/bedtime.jpg) |
 | **Colour from the artwork** | **Lyrics** |
 | ![Colour from the artwork](screenshots/art-colour.jpg) | ![Lyrics](screenshots/lyrics.jpg) |
+| **On demand** (IPTV playlist as shows and movies) | **Calendar** |
+| ![On demand](screenshots/on-demand.jpg) | ![Calendar](screenshots/calendar.jpg) |
+| **My Channels** | **Live TV mini guide** |
+| ![My Channels](screenshots/my-channels.jpg) | ![Live TV mini guide](screenshots/live-mini-guide.jpg) |
+| **Quick menu** | **Library health** |
+| ![Quick menu](screenshots/quick-menu.jpg) | ![Library health](screenshots/library-health.jpg) |
 
 The screenshots come from a real Kodi instance running the skin against a small test library of made-up titles.
 
