@@ -17,7 +17,7 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="skin.mediahub" version="1.9.1" name="MediaHub" provider-name="MediaHub">
+<addon id="skin.mediahub" version="1.9.2" name="MediaHub" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 		<import addon="script.mediahub.helper" version="1.6.1"/>
@@ -38,7 +38,7 @@
 			<screenshot>resources/screenshot-02.jpg</screenshot>
 			<screenshot>resources/screenshot-03.jpg</screenshot>
 		</assets>
-		<news>1.9.1 - Fixes Kodi closing by itself when the MediaHub Helper was updated (or Kodi closed) while the banner trailer was playing. If Kodi ever closes on its own, MediaHub now says where it happened and offers Safe mode. 1.9.0 - A welcome setup; Top 10 rows, a silent trailer in the banner, a greeting and an On now row for Live TV; ratings badges, extras and season progress; a sleep timer, subtitle styles, Are you still watching? and an after-movie page; Kids bedtime, a shared Family List and backup / restore; large text, high contrast, reduce motion, colour from the artwork and lyrics. 1.8.0 - A start-up intro with its own sound, and a MediaHub splash while Kodi loads. 1.7.0 - Trailer previews in the home rows, Because You Watched, mood rows and Coming Soon; Finish by, chapters, intro memory and Night / Dialogue sound modes in the player; people search, a mic key, Surprise me and Movies filter chips; profile avatars, Your year and downloads; seasonal themes and animated network cards. 1.6.1 - Fixed "Update failed" when pressing Update now: the update is now handed to Kodi's own installer. 1.6.0 - New player bar with the title's clearart or logo and 4K / HDR / Dolby / 5.1 badges, an Audio &amp; Subtitles panel, Skip Recap and Skip Credits, NEW and 4K badges, collection pages, a MediaHub screensaver, music screens and Live TV.</news>
+		<news>1.9.2 - Fixes Kodi closing by itself a little after start-up when Live TV has a very large channel list (such as an IPTV video-on-demand playlist): the On now row now lists only the channels you watched last. 1.9.1 - Fixes Kodi closing by itself when the MediaHub Helper was updated (or Kodi closed) while the banner trailer was playing. If Kodi ever closes on its own, MediaHub now says where it happened and offers Safe mode. 1.9.0 - A welcome setup; Top 10 rows, a silent trailer in the banner, a greeting and an On now row for Live TV; ratings badges, extras and season progress; a sleep timer, subtitle styles, Are you still watching? and an after-movie page; Kids bedtime, a shared Family List and backup / restore; large text, high contrast, reduce motion, colour from the artwork and lyrics. 1.8.0 - A start-up intro with its own sound, and a MediaHub splash while Kodi loads. 1.7.0 - Trailer previews in the home rows, Because You Watched, mood rows and Coming Soon; Finish by, chapters, intro memory and Night / Dialogue sound modes in the player; people search, a mic key, Surprise me and Movies filter chips; profile avatars, Your year and downloads; seasonal themes and animated network cards. 1.6.1 - Fixed "Update failed" when pressing Update now: the update is now handed to Kodi's own installer. 1.6.0 - New player bar with the title's clearart or logo and 4K / HDR / Dolby / 5.1 badges, an Audio &amp; Subtitles panel, Skip Recap and Skip Credits, NEW and 4K badges, collection pages, a MediaHub screensaver, music screens and Live TV.</news>
 	</extension>
 </addon>
 <addon id="script.mediahub.helper" name="MediaHub Helper" version="1.6.3" provider-name="MediaHub">

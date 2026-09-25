@@ -334,6 +334,8 @@ When Kodi starts it first shows its loading splash. MediaHub replaces Kodi's wit
 
 ## If Kodi closes by itself
 
+**1.9.2 fixes another: a huge Live TV channel list.** The On now row asked Kodi for every TV channel and kept the 20 watched last, so Kodi built the whole list first. With an IPTV playlist of hundreds of thousands of entries (a video-on-demand list where every episode is a "channel") that used up the memory a little after start-up, whatever screen you were on, and Apple TV closed Kodi. The row now asks only for the channels you watched last, and hides until you've watched one. Such a playlist still makes Kodi's Live TV itself use a lot of memory; a smaller one, or a video add-on for on-demand lists, is kinder to Apple TV.
+
 **1.9.1 fixes one cause.** When the MediaHub Helper was stopped while the banner trailer was playing (Kodi installing a helper update in the background just after start-up, or Kodi closing), the helper hung for 5 seconds. Kodi then force-stopped it, and that can make Kodi close by itself. The helper now stops straight away.
 
 The MediaHub Helper (1.6.1 and newer) also keeps a note of where you are while you use Kodi. If Kodi closes on its own (a crash, or Apple TV closing it), the next time Kodi starts MediaHub tells you where it happened, for example *Home, The Last Orbit, as a trailer preview started*. If you were moving around the menus, it also offers **Safe mode** (in the skin's own window, so it never holds up the helper):
