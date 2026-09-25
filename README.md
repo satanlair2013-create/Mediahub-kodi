@@ -331,3 +331,14 @@ When Kodi starts it first shows its loading splash. MediaHub replaces Kodi's wit
 - The MediaHub splash is shown from the second start after installing, because the helper copies it into Kodi's folder (`special://home/media/splash.png`) once it runs. If you switch to another skin it takes it away again. If you've put a splash of your own there (`splash.jpg`, or your own `splash.png`), it's left alone.
 - With **Show "Who's watching?"** on, Kodi goes straight to that screen and the intro doesn't play.
 - Without the helper, the intro still plays after a moment, just silently.
+
+## If Kodi closes by itself
+
+**1.9.1 fixes one cause.** When the MediaHub Helper was stopped while the banner trailer was playing (Kodi installing a helper update in the background just after start-up, or Kodi closing), the helper hung for 5 seconds. Kodi then force-stopped it, and that can make Kodi close by itself. The helper now stops straight away.
+
+The MediaHub Helper (1.6.1 and newer) also keeps a note of where you are while you use Kodi. If Kodi closes on its own (a crash, or Apple TV closing it), the next time Kodi starts MediaHub tells you where it happened, for example *Home, The Last Orbit, as a trailer preview started*. If you were moving around the menus, it also offers **Safe mode** (in the skin's own window, so it never holds up the helper):
+
+- **Safe mode** turns off trailer previews (home rows and the banner) and moving effects (**Reduce motion**). You can turn each back on in Skin Settings.
+- If Kodi closes again with Safe mode already on, the cause is something else. Please send the log: install **Kodi Logfile Uploader** (**Add-ons → Install from repository → Kodi Add-on repository → Program add-ons**), run it and send the address it shows. After a crash the useful part is in `kodi.old.log`, which it uploads too. The helper also writes the last few places it saw into the log (`MediaHub Helper: Kodi closed unexpectedly last time`).
+
+Closing Kodi normally, updating the helper or turning it off removes the note, so none of those count as a crash.
