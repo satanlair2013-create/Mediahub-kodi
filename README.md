@@ -75,7 +75,7 @@ The screenshots come from a real Kodi instance running the skin against a small 
 - **Hero slider**: a full-width banner with backdrop, clear logo (or the title if there's no logo), year, genre, runtime, rating and plot. It rotates every 9 seconds and shows page dots. Stay on it and the title's **trailer plays silently** on its right. A **greeting** with your avatar sits on top (*Good evening*, *Up late*). Pressing Select opens the details page. In Skin Settings you can make it show random movies, recently added movies or random TV shows.
 - **Network cards**: a slider of cards under the hero, with 38 built-in networks and studios plus 20 custom slots. A card only appears when your library has movies or shows from it. Each card matches items whose *studio* (for movies) or *network* (for TV shows) contains one of two filter words. On the focused card, a light sweeps across every few seconds and the logo gently "breathes".
 - **Network hub**: selecting a card opens a page with the network's logo, its own hero slider, *All movies* and *All TV shows* buttons, a "New & Noteworthy" row, and rows for movies and TV shows.
-- **Home rows you choose**: up to 12 rows, each set to one of 57 row types and put in any order (see [Home rows](#home-rows)), including **Top 10** rows with big rank numbers, **Because You Watched**, **Coming Soon**, **New This Week**, **Directed By …**, **Marvel in Story Order**, the **Family List**, mood rows like *Feel-Good Movies* and *Short on Time*, and rows from **any add-on's folder**. Hold OK on a row's card to **move or hide the row**. With Live TV there are also **My Channels** (the channels you pick), **On now** and two rows of a **channel group** you choose (Sports, News). **Continue Watching: On Demand** has what you're part-way through from an IPTV catalogue. After time away, a **New since you were last here** banner lists what was added. By default they are Continue Watching, Up Next, My List, Recommended For You, New Movies, New Episodes, TV Shows For You, Collections and Top Rated Movies. A row is hidden when it has nothing in it.
+- **Home rows you choose**: up to 12 rows, each set to one of 60 row types and put in any order (see [Home rows](#home-rows)), including **Top 10** rows with big rank numbers, **Because You Watched**, **Coming Soon**, **New This Week**, **Directed By …**, **Marvel in Story Order**, the **Family List**, mood rows like *Feel-Good Movies* and *Short on Time*, and rows from **any add-on's folder**. Hold OK on a row's card to **move or hide the row**. With Live TV there are also **My Channels** (the channels you pick), **On now** and two rows of a **channel group** you choose (Sports, News). **Continue Watching: On Demand** has what you're part-way through from an IPTV catalogue. After time away, a **New since you were last here** banner lists what was added. By default they are Continue Watching, Up Next, My List, Recommended For You, New Movies, New Episodes, TV Shows For You, Collections and Top Rated Movies. A row is hidden when it has nothing in it.
 - **Trailer previews**: stay on a movie in a home row for a few seconds and its trailer plays in a small panel at the top right, like Disney+ and Netflix. Moving on stops it (see [Trailer previews](#trailer-previews)).
 - **My List and thumbs**: add any movie or show to My List from its details page or the long-press menu, and rate it *Not for me*, *I like this* or *Love this!* (see [My List, thumbs and recommendations](#my-list-thumbs-and-recommendations)). **Recommended For You** learns from your thumbs.
 - **Up Next**: a row with the next episode of every show you're part-way through, most recently watched first. Selecting one plays it with the following episodes queued. In the last 30 seconds of an episode, a card in the corner shows which episode plays next.
@@ -100,6 +100,7 @@ The screenshots come from a real Kodi instance running the skin against a small 
 - **Screensaver**: slowly zooming fanart with each title's logo, name, year and genre, or a **big clock**, both with **today's weather** (see [Screensaver](#screensaver)).
 - **Music**: an album-art grid, album pages with the track list, a queue, and a **now playing** screen with big album art on a soft colour wash of it (or the artist's fanart), the song, artist and album, progress, what's up next and the song's **lyrics**. Press OK for the controls: previous, play/pause, next, stop, shuffle, repeat, lyrics and the queue.
 - **Live TV**: **My Channels** on the home screen, a **mini guide** (channel, now with progress, next) when you press Info while watching, a TV guide with channel logos, a "now" line and the focused programme's details at the top; a channel list with what's on now; recordings, timers and search; programme details; and, while watching, a channel list and the channel's guide over the picture (the guide button in the player bar). A **last channel** button in the player bar flips back to the channel you watched before, and two home rows can each show a **channel group** such as Sports or News. It works with any PVR add-on, for example IPTV Simple Client, including Xtream Codes services (see [Live TV extras](#live-tv-extras)).
+- **MediaHub IPTV** (a separate add-on in the MediaHub repository): sign in to your **Xtream Codes** IPTV service and get Live TV with what's on now and next, catch-up, and films and series with their posters and plots, resume and the next episode, with its own side-menu entry and home rows (see [MediaHub IPTV](#mediahub-iptv-xtream-codes)).
 - **On demand**: an IPTV video-on-demand playlist as **TV shows (by season) and movies**, A-Z with search, read straight from the playlist instead of loading it into Live TV, with **posters and plots**, **resume** and the **next episode**, and groups you'd rather not see hidden behind the Kids mode PIN (see [On demand](#on-demand)).
 - **Calendar**: the next two weeks of episodes for the shows in your library, day by day (see [Calendar](#calendar)).
 - **Quick menu**: holding OK (the context menu) shows what it's for at the top, with Play, Play trailer, Mark as watched, My List and the rest.
@@ -136,6 +137,7 @@ Works on Apple TV, Fire TV, Android TV, Windows, Mac, Linux and any other Kodi b
    ```
 3. Go to **Settings → Add-ons → Install from zip file → mediahub** and pick **`repository.mediahub-1.0.1.zip`**.
 4. Go to **Install from repository → MediaHub Repository → Look and feel → Skin → MediaHub → Install**. Say **Yes** to switching skins.
+5. For an Xtream Codes IPTV service, also install **Install from repository → MediaHub Repository → Video add-ons → MediaHub IPTV** (see [MediaHub IPTV](#mediahub-iptv-xtream-codes)).
 
 Installing through the repository means Kodi also installs the **MediaHub Helper** add-on the skin needs, and keeps both up to date (see [Updates](#updates)). To install once without the repository, pick `script.mediahub.helper-<version>.zip` in step 3, then do step 3 again with `skin.mediahub-<version>.zip`.
 
@@ -358,7 +360,7 @@ Some IPTV playlists are really catalogues: every episode and every film is an en
 
 ### Xtream Codes services
 
-Kodi has no Xtream Codes add-on of its own; **IPTV Simple Client** reads an Xtream service through the playlist and guide addresses every Xtream service gives out. With your provider's server address, username and password:
+The easiest way is **[MediaHub IPTV](#mediahub-iptv-xtream-codes)**. To have the same service in Kodi's own Live TV as well (its TV guide, reminders and recording), **IPTV Simple Client** reads it through the playlist and guide addresses every Xtream service gives out (MediaHub IPTV's **Use with Kodi's Live TV** shows yours). With your provider's server address, username and password:
 
 1. **Add-ons → Install from repository → PVR clients → PVR IPTV Simple Client**, install and enable it.
 2. In its settings (**Skin settings → Live TV → Catch-up and IPTV settings**), **General → M3U playlist URL**: `http://SERVER:PORT/get.php?username=USER&password=PASS&type=m3u_plus&output=ts`
@@ -367,6 +369,24 @@ Kodi has no Xtream Codes add-on of its own; **IPTV Simple Client** reads an Xtre
 5. Restart Kodi. Channels are in Live TV; films and series from the same playlist are easiest in **On demand**, which reads that playlist without loading it all into Live TV. If the playlist is huge (hundreds of thousands of entries) and Kodi struggles, turn IPTV Simple Client off (**Add-ons → My add-ons → PVR clients**): On demand keeps reading its playlist address.
 
 Only use a service you are licensed to watch.
+
+## MediaHub IPTV (Xtream Codes)
+
+**MediaHub IPTV** (`plugin.video.mediahub.xtream`) is a video add-on for Xtream Codes IPTV services, made to go with MediaHub (it works with any skin). It talks to your service's own Xtream API rather than loading a giant playlist, so even a service with hundreds of thousands of films stays quick on an Apple TV.
+
+**Get it**: **Skin settings → IPTV (Xtream Codes) → Get MediaHub IPTV** (or **Add-ons → Install from repository → MediaHub Repository → Video add-ons → MediaHub IPTV**). Then **Sign in to your IPTV service** with the server address, username and password your provider gave you (a pasted playlist address works too: the server is taken from it). **IPTV** appears in the side menu.
+
+- **Live TV**: your service's categories, each channel with what's on now (and its times) and next. Hold OK on a channel for its **programme guide** and, where your service keeps them, **catch-up**. MPEG-TS or HLS streams (**MediaHub IPTV settings**).
+- **Catch-up**: the channels your service records, by day (today, yesterday and back as far as it keeps), then the programme.
+- **Movies** and **Series**: by category, with the service's own posters, backdrops, plots, cast, ratings and trailers (a film's details arrive a moment after the page opens). A series opens its seasons and episodes.
+- **Continue Watching**: what you're part-way through resumes (or *Play from beginning*), watched titles get a tick, and playing an episode queues the next ones, so Up Next offers them. A finished episode puts the next one here.
+- **Recently added** films and series, and **Search** across channels, films and series. These use a list of everything on your service, which the add-on reads once a day in the background, a category at a time.
+- **Account**: status, expiry date and connections in use, and **Sign out**.
+- **Use with Kodi's Live TV**: the playlist and guide addresses for IPTV Simple Client (see [Xtream Codes services](#xtream-codes-services)).
+- **Hide categories** (at the end of each category list): leave out the ones you don't want. Adult-looking categories are hidden until you choose, and with a Kids mode PIN set, changing the list asks for it. In **Kids mode** only children's categories show (Kids, Family, Cartoons, Animation, Disney…), in the pages, search and home rows.
+- **Home rows** (**Customise home rows**): **Continue Watching: IPTV**, **IPTV: New Movies** and **IPTV: New Series**.
+
+The add-on doesn't come with any channels, films or series: it plays what your own service offers. Only use a service you are licensed to watch.
 
 ## Storage
 
