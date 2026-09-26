@@ -300,11 +300,25 @@ Turn it on in **Skin settings → MediaHub screensaver**, and pick when it start
 
 **Skin settings → Cinema mode (Home Assistant)** sets the room when a film plays: Home Assistant turns on a scene or script (`scene.film_night`, `script.dim_lights`, an automation...) **when a film starts** full screen (and again when it carries on after a pause), another **when it's paused**, and another **at the end credits** (the last few minutes) or when it stops. **Episodes too** does the same for TV. Give it your Home Assistant's address (`http://homeassistant.local:8123`) and a long-lived access token (Home Assistant → your profile → Security); **Test cinema mode** turns on the first scene, then the end one ten seconds later, and says whether Home Assistant answered. Trailers on the home screen don't count, and a Home Assistant that's slow or off never holds up the film.
 
+**Lights that take the film's colours**: name one or more lights (`light.tv_strip, light.lamp`) and, when a film starts or carries on, they take the main colour of its poster. MediaHub works the colour out itself from Kodi's copy of the poster; for a web poster it can't read, it asks Home Assistant's **Color Extractor** integration, if you've added it.
+
+### Doorbell
+
+**Skin settings → Cinema mode (Home Assistant) → Doorbell: pause and show who's at the door** watches a doorbell in Home Assistant (with the same address and token): an event entity such as `event.front_door` (every press), or a binary sensor, input boolean or switch (`binary_sensor.doorbell`, when it turns on). When it rings, what's playing pauses and a pop-up shows the picture from a **Camera** (`camera.front_door`), fresh every few seconds, with **Resume** and **Dismiss**. **Test the doorbell** shows it straight away. Home Assistant is asked every two seconds, in the background.
+
 ## Movie quiz night
 
 **Movie quiz** in the side menu plays ten questions about the films in your library: a still from a film slowly zooming out, which film stars these actors, which film this plot is (its title blanked out), and when a film came out, with four answers each and 20 seconds. A faster right answer scores more (500 to 1000).
 
 Up to four people play on their phones: the lobby shows a QR code that opens [MediaHub Web Remote](#mediahub-web-remote) and pairs the phone, they type their name, and their phone becomes four big coloured answer buttons (it shows the question too, except for the stills). The TV shows who has answered, then the answer and everyone's points, and the winner at the end. With nobody on a phone, **Play with the remote** is a game for one. In Kids mode it only asks about family films.
+
+## Movie match
+
+**Movie match** in the side menu is for deciding what to watch together. Everyone scans the lobby's QR code with their phone ([MediaHub Web Remote](#mediahub-web-remote)) and swipes through the same pile of films from your library (up to 40, the ones nobody's watched first): right or **Yes** for one they'd watch, left or **Nope** for one they wouldn't. The first film everyone says yes to is **a match**, shown on the TV with **Play it** and **Keep swiping**. If the pile runs out first, the most liked film is offered. With nobody on a phone, **Swipe with the remote** plays it on the TV.
+
+## Trailer night
+
+**Trailer night** in the side menu plays the trailers of the films you haven't watched yet, one after another, like the trailers before a film at the cinema, with the film's logo, year, genre, running time and plot over the trailer. **Watch the film** plays it, **Next trailer** skips on, and **Add to My List** keeps it for later. In Kids mode it keeps to the films kids may see.
 
 ## While you watch
 
@@ -410,6 +424,8 @@ Only use a service you are licensed to watch.
 - **Movies** and **Series**: by category, with the service's own posters, backdrops, plots, cast, ratings and trailers (a film's details arrive a moment after the page opens). A series opens its seasons and episodes.
 - **Continue Watching**: what you're part-way through resumes (or *Play from beginning*), watched titles get a tick, and playing an episode queues the next ones, so Up Next offers them. A finished episode puts the next one here.
 - **New episodes**: when a series you've caught up with gets more episodes, the next one appears in Continue Watching and the series gets a **NEW EPISODES** badge (the list is checked once a day).
+- **Record every episode**: next to **Record** in the guide, the timeline and search. Every showing of that title on that channel is lined up for recording, now and every half hour as the guide fills in, leaving out repeats (the same description as one already recorded or lined up).
+- **Search the guide**: what's on now or coming up on any channel, by title, from your service's whole TV guide (downloaded in one go and kept for six hours). Each result offers **Watch**, **Remind me**, **Record** and **Record every episode**.
 - **Recently added** films and series, and **Search** across channels, films and series. These use a list of everything on your service, which the add-on reads once a day in the background, a category at a time.
 - **My List**: long-press a film or series and choose **Add to My List**. It has its own page, and MediaHub's **My List** row shows it after your library's titles.
 - **Downloads**: long-press a film or episode and choose **Download** to copy it to MediaHub's downloads folder (see [Downloads](#downloads); not on Apple TV).
@@ -423,7 +439,7 @@ The add-on doesn't come with any channels, films or series: it plays what your o
 
 ## More MediaHub add-ons
 
-Six more add-ons go with MediaHub (each works with any skin). Get them from **Skin settings → More from MediaHub** (or **Add-ons → Install from repository → MediaHub Repository**). Radio, Podcasts and Cinema then appear in the side menu.
+Nine more add-ons go with MediaHub (each works with any skin). Get them from **Skin settings → More from MediaHub** (or **Add-ons → Install from repository → MediaHub Repository**). Radio, Podcasts and Cinema then appear in the side menu, and Weather once MediaHub Weather is set up.
 
 ### MediaHub Radio
 
@@ -443,6 +459,7 @@ Six more add-ons go with MediaHub (each works with any skin). Get them from **Sk
 - **Follow** a podcast (on its page, or hold OK). **Your podcasts** lists them, and **Latest episodes** has their newest episodes, unplayed first, with **NEW** on the ones that came out since you last opened the podcast.
 - Episodes **resume** where you stopped (or *Play from beginning*), get a tick once played, and **Continue listening** has the ones you're part-way through. Hold OK for *Mark as played* or *Mark all as played*.
 - Every three hours, the feeds of the podcasts you follow are checked, and a message says when a new episode comes out (**MediaHub Podcasts settings** turns it off). Video podcasts play too.
+- **Download** an episode (hold OK) to have it without the internet: it plays from the file, and **Downloads** lists them. On a podcast you follow, **Download new episodes automatically** brings down its newest episode as it comes out and keeps the number set in the settings (older ones go once played). The settings also choose the downloads folder.
 
 ### MediaHub Web Remote
 
@@ -458,7 +475,9 @@ The remote has a pad (tap the arrows, or swipe; tap OK), Back, Home, Info and Me
 
 **Voice search**: the microphone next to Search uses the browser's speech recognition where the page is allowed to (browsers only allow it on a secure `https` page, which a remote on your home network isn't), and otherwise puts you in the search box with a tip to use the microphone on the phone's keyboard, which works everywhere. For the same reason, the phone's **Share** menu can't send to the remote: sharing to a web page needs it installed from an `https` address.
 
-**Movie quiz night**: while [the quiz](#movie-quiz-night) is on the TV, the Remote page offers to join it.
+**Movie quiz night** and **Movie match**: while [the quiz](#movie-quiz-night) or [Movie match](#movie-match) is on the TV, the Remote page offers to join it; in Movie match the phone shows the film cards to swipe.
+
+**Play-next queue**: while something plays, picking a search result offers **Play now**, **Play next** or **Add to the queue** (a TV show: its next episode you haven't watched). The Remote page shows what's **up next**, with move up, move down and remove. It's Kodi's own playlist, so the TV plays through it as usual.
 
 It works on your home network only, and each phone needs the code from the TV once (the quiz's code works for every phone until the quiz closes). **MediaHub Web Remote settings** change the port (8585) or turn it off, and **Forget paired phones** makes every phone pair again.
 
@@ -499,6 +518,26 @@ Each Kodi writes only its own file in the folder's `MediaHub Sync` folder and re
 
 IMDb titles are found by their IMDb id (so they match even when the title's spelled differently), Letterboxd's by title and year. It asks which of these to do, and ends with what isn't in your library.
 
+### MediaHub Audiobooks
+
+**MediaHub Audiobooks** (`plugin.audio.mediahub.audiobooks`) plays LibriVox's free audiobooks (classics out of copyright, read by volunteers), through the Internet Archive; no account needed.
+
+- **Popular**, **Newest**, **Genres** and **Search** by title or author; **MediaHub Audiobooks settings** can keep to books read in one language.
+- A book plays chapter after chapter and **carries on where you stopped**, next time too: its page starts with *Carry on: Chapter 5*, and **Continue listening** (and MediaHub's **Audiobooks: Continue Listening** home row) has the books you're part-way through, with the time left.
+- **My books** keeps the ones you want (hold OK); **Mark as finished** takes a book off Continue listening.
+
+### MediaHub Classics
+
+**MediaHub Classics** (`plugin.video.mediahub.classics`) has old films and TV that are free to watch because they're out of copyright, from the Internet Archive; no account needed.
+
+- **Feature films**, **Film noir**, **Science fiction and horror**, **Comedy**, **Westerns**, **Silent films**, **Cartoons** and **Classic TV**, most watched first, and **Search**. In Kids mode only Cartoons show.
+- A film **resumes** where you stopped (or starts again), gets a tick once watched, and **Continue watching** has the ones you're part-way through. **My List** keeps films for later.
+- **Home rows**: **Classics: Continue Watching**, and **Classic Films** (a different handful of well-liked films each day).
+
+### MediaHub Weather
+
+**MediaHub Weather** (`weather.mediahub`) is a Kodi weather add-on using [Open-Meteo](https://open-meteo.com) (free, no account or key), for up to three towns: now, the next 24 hours and the next 7 days, in your region's units. **Skin settings → More from MediaHub → MediaHub Weather** installs it, makes it Kodi's weather and asks for your town. Then the **Weather** page (side menu) shows now, the next 12 hours and 7 days (**Next town** switches between the towns set), the home screen's greeting has the temperature, and the clock screensaver uses it. It works with any skin.
+
 ## Storage
 
 **Skin settings → Storage → Picture cache** shows how much room Kodi's saved pictures (and old add-on downloads) take, and how many pictures there are. Kodi keeps a copy of every poster, backdrop and logo it has ever shown and never lets go of them, which adds up on a box with little storage like Apple TV. **Clear pictures not used for a month** removes those (through Kodi, so its picture list stays right) and the old add-on download zips; anything still in use is simply fetched again the next time it's shown.
@@ -516,6 +555,8 @@ If free memory stays under 250 MB for a minute and a half while nothing plays, L
 - **Missing artwork**: movies and shows without a poster or a backdrop. **Look for missing artwork** asks Kodi to look them up again (50 at a time).
 - **Duplicates**: the same movie twice (same IMDb / TMDB id, or same title and year), with the other file's name.
 - **Not identified**: movies and shows the scraper didn't recognise (no plot and no artwork), usually a file or folder name it couldn't make sense of.
+
+- **What's missing** (**Look for what's missing**): episodes that have been on TV but aren't in your library (from TVmaze; not the specials, nor what hasn't aired), shown per show as *3 missing: S03E01 · S03E02 · S03E03* (a whole season as *S01 (all 10)*), and the films of a collection you have part of that are out but not in your library (from TMDB, with the key from [On demand](#on-demand) or MediaHub Cinema). It takes a while, so it runs when you ask, and the answer is kept for next time.
 
 **Clean library** runs Kodi's own clean, which removes what's no longer on disk. Select an entry to open it.
 
