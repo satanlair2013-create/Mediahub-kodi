@@ -101,7 +101,8 @@ The screenshots come from a real Kodi instance running the skin against a small 
 - **Music**: an album-art grid, album pages with the track list, a queue, and a **now playing** screen with big album art on a soft colour wash of it (or the artist's fanart), the song, artist and album, progress, what's up next and the song's **lyrics**. Press OK for the controls: previous, play/pause, next, stop, shuffle, repeat, lyrics and the queue.
 - **Live TV**: **My Channels** on the home screen, a **mini guide** (channel, now with progress, next) when you press Info while watching, a TV guide with channel logos, a "now" line and the focused programme's details at the top; a channel list with what's on now; recordings, timers and search; programme details; and, while watching, a channel list and the channel's guide over the picture (the guide button in the player bar). A **last channel** button in the player bar flips back to the channel you watched before, and two home rows can each show a **channel group** such as Sports or News. It works with any PVR add-on, for example IPTV Simple Client, including Xtream Codes services (see [Live TV extras](#live-tv-extras)).
 - **MediaHub IPTV** (a separate add-on in the MediaHub repository): sign in to your **Xtream Codes** IPTV service and get Live TV with what's on now and next, catch-up, and films and series with their posters and plots, resume and the next episode, with its own side-menu entry and home rows. It has a **TV guide** page, a **Channels** panel and mini guide while you watch, **last channel** and **channel numbers**, programme **reminders**, **catch-up search**, **My List**, **downloads** and **more than one account** (see [MediaHub IPTV](#mediahub-iptv-xtream-codes)).
-- **More MediaHub add-ons** (also in the MediaHub repository, each on its own): **MediaHub Radio** (thousands of internet radio stations), **MediaHub Podcasts** (find, follow and listen), **MediaHub Web Remote** (your phone's web browser as the remote) and **MediaHub Sync** (what you've watched and your lists, the same on every Kodi in the house). See [More MediaHub add-ons](#more-mediahub-add-ons).
+- **More MediaHub add-ons** (also in the MediaHub repository, each on its own): **MediaHub Radio** (thousands of internet radio stations), **MediaHub Podcasts** (find, follow and listen), **MediaHub Web Remote** (your phone's web browser as the remote, a second screen, and Listen on this phone), **MediaHub Sync** (what you've watched and your lists, the same on every Kodi in the house, and Watch together in two rooms), **MediaHub Cinema**, **MediaHub Import**, **MediaHub Audiobooks**, **MediaHub Classics**, **MediaHub Weather**, **MediaHub Scores** (your teams' fixtures and results), **MediaHub News** (headlines, bulletins and a news ticker) and **MediaHub Space** (NASA's picture of the day). See [More MediaHub add-ons](#more-mediahub-add-ons).
+- **Games night**: [Movie quiz](#movie-quiz-night), [Name that tune](#name-that-tune) and [Movie match](#movie-match), played on your phones.
 - **On demand**: an IPTV video-on-demand playlist as **TV shows (by season) and movies**, A-Z with search, read straight from the playlist instead of loading it into Live TV, with **posters and plots**, **resume** and the **next episode**, and groups you'd rather not see hidden behind the Kids mode PIN (see [On demand](#on-demand)).
 - **Calendar**: the next two weeks of episodes for the shows in your library, day by day (see [Calendar](#calendar)).
 - **Quick menu**: holding OK (the context menu) shows what it's for at the top, with Play, Play trailer, Mark as watched, My List and the rest.
@@ -291,7 +292,7 @@ A watch-together list for the whole house. The people button on a movie's or sho
 
 Turn it on in **Skin settings → MediaHub screensaver**, and pick when it starts (2, 5, 10, 15 or 30 minutes without a button press). It shows your movies and shows while nothing is playing, and any button wakes it up. Turning it on switches Kodi's own screensaver off (turning it off puts Kodi's *Dim* back), so the two don't overlap. In Kids mode it only shows family titles.
 
-- **Screensaver style**: *Pictures from your library*, *Photo frame* or *Big clock*: a large clock, the date and the weather on black, drifting slowly so nothing marks the screen. (A library with no backdrops yet gets the clock too.)
+- **Screensaver style**: *Pictures from your library*, *Photo frame*, *Space pictures* (NASA's pictures of the day, with [MediaHub Space](#mediahub-space)) or *Big clock*: a large clock, the date and the weather on black, drifting slowly so nothing marks the screen. (A library with no backdrops yet gets the clock too.)
 - **Photo frame** shows your own photos: every picture in the **Photo folder** you pick (and the folders in it; a network share works too) and the ones sent from a phone with [MediaHub Web Remote](#mediahub-web-remote), in a random order, whole on a dimmed copy of themselves, with the folder's name, the clock and the weather.
 - With [MediaHub Radio](#mediahub-radio)'s alarm clock, the clock also shows the next alarm.
 - **Weather**: set **Skin settings → Weather for** to your town (*Leeds*, or *Leeds, UK* when there are several) and both styles show the temperature, what it's like and today's high and low, from [Open-Meteo](https://open-meteo.com) (free, no account), in °C or °F following Kodi's region setting. It's only looked up while the screensaver shows, at most every half hour. If Kodi has a weather add-on set up (**Settings → Services → Weather**), that one is used instead and the town setting hides.
@@ -316,6 +317,10 @@ Up to four people play on their phones: the lobby shows a QR code that opens [Me
 
 **Movie match** in the side menu is for deciding what to watch together. Everyone scans the lobby's QR code with their phone ([MediaHub Web Remote](#mediahub-web-remote)) and swipes through the same pile of films from your library (up to 40, the ones nobody's watched first): right or **Yes** for one they'd watch, left or **Nope** for one they wouldn't. The first film everyone says yes to is **a match**, shown on the TV with **Play it** and **Keep swiping**. If the pile runs out first, the most liked film is offered. With nobody on a phone, **Swipe with the remote** plays it on the TV.
 
+## Name that tune
+
+**Name that tune** in the side menu is the movie quiz with music: each question plays the theme tune of one of your shows or films (a `theme.mp3`, `theme.flac` or `theme.m4a` in its folder, as saved by tools like TV Tunes) and asks where it's from, with four answers. Bars bounce while it plays; the answer shows the poster. It's played on phones or with the remote like [the quiz](#movie-quiz-night), and the phones and the TV never show what's playing. It needs at least three shows or films with theme music.
+
 ## Trailer night
 
 **Trailer night** in the side menu plays the trailers of the films you haven't watched yet, one after another, like the trailers before a film at the cinema, with the film's logo, year, genre, running time and plot over the trailer. **Watch the film** plays it, **Next trailer** skips on, and **Add to My List** keeps it for later. In Kids mode it keeps to the films kids may see.
@@ -327,13 +332,16 @@ The player bar has four new round buttons: **Audio & Subtitles**, **Chapters**, 
 - **Finish by**: pick *After this episode* or a time (every half hour for the next 5 hours). Up Next leaves out episodes that wouldn't finish in time, and when an episode ends, the next one only plays if it fits; otherwise playback stops and a message says so. It switches itself off once the time has passed.
 - **Chapters**: every chapter in the file with a picture from it and its time, plus your bookmarks. Select one to jump there.
 - **Intro memory**: press **Skip Intro** once in a show and from then on its intros are skipped for you (a short message says so). To turn this off, go to **Skin settings → Skip intros automatically in shows where you've skipped one**; **Offer Skip Intro again in every show** forgets the shows it remembers.
-- **Sleep timer** (the timer button): *Stop after this one* or *Sleep in* 15 to 90 minutes. On live TV (Kodi's Live TV or MediaHub IPTV) *Stop after this one* stops when the programme on now ends, so Kids bedtime works for live channels too. In the last minute the sound fades out and the picture dims, then it stops and the volume goes back to where it was. Pressing any button during the fade cancels it. **Finish by** is in the same menu.
+- **Sleep timer** (the timer button): *Stop after this one*, *TV off after this one* or *Sleep in* 15 to 90 minutes. On live TV (Kodi's Live TV or MediaHub IPTV) *Stop after this one* stops when the programme on now ends, so Kids bedtime works for live channels too. In the last minute the sound fades out and the picture dims, then it stops and the volume goes back to where it was. Pressing any button during the fade cancels it. **Finish by** is in the same menu.
+- **The TV goes off too**: *TV off after this one* stops at the end and turns the TV off, and **Skin settings → Turn the TV off too when the sleep timer or bedtime stops what's playing** does the same for every sleep timer and for Kids bedtime. It uses HDMI-CEC (Kodi's own *CECStandby*: the box has to be plugged into the TV with CEC on), or, when **The TV in Home Assistant** is set (`media_player.living_room_tv`, `switch.tv` or `remote.tv`, with the Home Assistant address and token from [Cinema mode](#cinema-mode-home-assistant)), Home Assistant turns it off.
+- **Watch together** (a player bar button, with [MediaHub Sync](#mediahub-sync)): play the same film or episode with another room.
 - **Subtitle style** (in Audio & Subtitles): *Standard*, *Large*, *Extra large*, *Yellow* or *Boxed* (white on a dark box, the easiest to read). It sets Kodi's own subtitle settings, so it sticks.
 - **Are you still watching?**: after three episodes in a row with no button pressed, the next one pauses and asks. *Continue watching* carries on; *Stop* stops. **Skin settings → Ask "Are you still watching?" after 3 in a row** turns it off.
 - **After the movie**: when a film ends (or you stop it near the end), a page shows its logo, asks *How was it?* with the thumbs, and lists More Like This. **Skin settings → Show rating and More Like This after a movie** turns it off.
 - **Each show remembers its languages**: change the audio language or the subtitles (in Audio & Subtitles, or Kodi's own menu) and the show's next episodes start with the same audio language and the same subtitles, or none. Only a change you make is kept, so shows you never touch follow Kodi's language settings. **Skin settings → Each show remembers its audio language and subtitles** turns it off.
 - **Stream info** (a button in the player bar, for films and shows as well as IPTV): a small box in the top corner with the video (size, frame rate, codec, decoder, pixel format), the audio (codec, channels, sample rate) and how full the buffer is. Press it again to hide it. Useful when a stream stutters.
 - **Theme music**: open a show's page and its theme tune plays quietly while you look around, if there's a `theme.mp3` (or `theme.flac`, `theme.m4a`) in the show's folder, as saved by tools like TV Tunes. It stops when you leave the page or play something. **Skin settings → Play a show's theme music on its page** turns it off.
+- **Instant mix** (a music player button, and **Instant mix** in the context menu of a song, artist, album or genre): fills the music queue with songs from your library that go with it (the same genres and moods first, from around the same years, the artists taking turns), the song itself first, and adds more before it runs out. Playing something else ends it.
 - **Sound modes**: **Night** lowers the volume and adds some of Kodi's volume amplification, so quiet speech stays clear while explosions don't wake anyone. **Dialogue boost** only adds the amplification. **Normal** puts everything back. Amplification doesn't work when your receiver decodes the sound itself (passthrough), so on those setups Night just lowers the volume. Picture presets aren't possible: Kodi doesn't let skins change the TV's picture.
 
 ## Finding something
@@ -439,7 +447,7 @@ The add-on doesn't come with any channels, films or series: it plays what your o
 
 ## More MediaHub add-ons
 
-Nine more add-ons go with MediaHub (each works with any skin). Get them from **Skin settings → More from MediaHub** (or **Add-ons → Install from repository → MediaHub Repository**). Radio, Podcasts and Cinema then appear in the side menu, and Weather once MediaHub Weather is set up.
+Twelve more add-ons go with MediaHub (each works with any skin). Get them from **Skin settings → More from MediaHub** (or **Add-ons → Install from repository → MediaHub Repository**). Radio, Podcasts and Cinema then appear in the side menu, and Weather once MediaHub Weather is set up.
 
 ### MediaHub Radio
 
@@ -475,7 +483,15 @@ The remote has a pad (tap the arrows, or swipe; tap OK), Back, Home, Info and Me
 
 **Voice search**: the microphone next to Search uses the browser's speech recognition where the page is allowed to (browsers only allow it on a secure `https` page, which a remote on your home network isn't), and otherwise puts you in the search box with a tip to use the microphone on the phone's keyboard, which works everywhere. For the same reason, the phone's **Share** menu can't send to the remote: sharing to a web page needs it installed from an `https` address.
 
-**Movie quiz night** and **Movie match**: while [the quiz](#movie-quiz-night) or [Movie match](#movie-match) is on the TV, the Remote page offers to join it; in Movie match the phone shows the film cards to swipe.
+**Movie quiz night**, **Name that tune** and **Movie match**: while [the quiz](#movie-quiz-night), [Name that tune](#name-that-tune) or [Movie match](#movie-match) is on the TV, the Remote page offers to join it; in Movie match the phone shows the film cards to swipe.
+
+**Second screen**: while a film or an episode from your library plays, the Remote page shows its year, genres, rating and director, its story (tap to read it all), its **Cast** (tap someone: what else they're in, in your library, to play or queue) and, for an episode, the **Next episode** with **Play next**.
+
+**Out of sync?** (under what's playing, for videos): **Subtitles** and **Sound**, each **Too early** or **Too late**, a tenth of a second at a time, with the offset now; **Back in step** puts both back. It's Kodi's own subtitle and audio offset, so the TV shows its slider and Kodi remembers the offset for that video.
+
+**Browse**: a tab with Continue watching (films and episodes), Recently added films and episodes, My List and your Collections (a collection opens its films, with **Show on the TV**), as posters. Tap to play, or, while something plays, **Play now**, **Play next** or **Add to the queue**.
+
+**Listen on this phone**: while the TV plays something to listen to (a book from MediaHub Audiobooks, a podcast, a radio station or your music), **Listen on this phone** carries on in the phone's browser from the same second, with the rest of the book's chapters or the queue after it, and the TV stops. **Back to the TV** hands it back from where the phone got to. Files only Kodi can reach (your music library, a downloaded episode) come to the phone through the remote. A browser may need a tap on play the first time.
 
 **Play-next queue**: while something plays, picking a search result offers **Play now**, **Play next** or **Add to the queue** (a TV show: its next episode you haven't watched). The Remote page shows what's **up next**, with move up, move down and remove. It's Kodi's own playlist, so the TV plays through it as usual.
 
@@ -499,6 +515,8 @@ Each Kodi writes only its own file in the folder's `MediaHub Sync` folder and re
 
 **Carry on watching**: stop a film or episode on one Kodi and, within twelve hours, the next Kodi's home screen shows a **Carry on watching** banner (*From Living room: Night Shift, at 0:51*). **Carry on watching** plays it from there; **Dismiss** hides it.
 
+**Watch together**: while a film or an episode from the library plays, the player bar's **Watch together** button asks the other Kodis in the house (with MediaHub Sync) who's there, and you pick a room. That Kodi asks *Living room would like to watch Night Shift together. Start it here?* and plays the same film from its own library, from the same moment. From then on a pause, a play or a skip on either one does the same on the other, and the one that started it says where it is every few seconds, so the other catches up if it drifts. Stopping on either one ends it (the button again asks to stop). The Kodis talk directly over the home network (UDP port 8586; the device names come from **MediaHub Sync settings**); the sync folder isn't needed for it, but helps find the others on networks that block broadcasts. **Watch together** in MediaHub Sync's settings turns it off.
+
 ### MediaHub Cinema
 
 **MediaHub Cinema** (`plugin.video.mediahub.cinema`) shows what's at the cinema, from [TMDB](https://www.themoviedb.org).
@@ -506,6 +524,7 @@ Each Kodi writes only its own file in the folder's `MediaHub Sync` folder and re
 - **Now showing** and **Coming soon** at cinemas in your country (from Kodi's language, or **MediaHub Cinema settings**), and **Search**, with posters, backdrops and what each film is about. Selecting a film plays its **trailer** (with the YouTube add-on); **About this film** has its cast and when it comes out at home.
 - **Tell me when it's out at home**: twice a day it checks the films you picked, and says when one can be bought or rented (or is out on disc) in your country, or turns up in your library. **Waiting for** and **Out at home** list them.
 - **Home rows**: **Cinema: Now Showing** and **Cinema: Coming Soon**; a card offers the trailer, Tell me and About.
+- **Where to watch** (a film's context menu, or its card's menu): the streaming services that have it in your country, and where it's free, to rent or to buy, with their logos (from JustWatch, through TMDB). **About this film** lists them too.
 - It needs a free TMDB API key (themoviedb.org → Settings → API): its own setting, or the one [On demand](#on-demand) already uses. Cinema times near you aren't included: there's no free, open listing of them.
 
 ### MediaHub Import
@@ -538,6 +557,32 @@ IMDb titles are found by their IMDb id (so they match even when the title's spel
 
 **MediaHub Weather** (`weather.mediahub`) is a Kodi weather add-on using [Open-Meteo](https://open-meteo.com) (free, no account or key), for up to three towns: now, the next 24 hours and the next 7 days, in your region's units. **Skin settings → More from MediaHub → MediaHub Weather** installs it, makes it Kodi's weather and asks for your town. Then the **Weather** page (side menu) shows now, the next 12 hours and 7 days (**Next town** switches between the towns set), the home screen's greeting has the temperature, and the clock screensaver uses it. It works with any skin.
 
+### MediaHub Scores
+
+**MediaHub Scores** (`plugin.video.mediahub.scores`) follows your teams, in any sport [TheSportsDB](https://www.thesportsdb.com) knows (football, rugby, basketball, ice hockey, American football, cricket and more; free, no account).
+
+- **Add a team** (search by name), then each team shows its **Next matches**, its **Results** and its league's **Table**.
+- **On match days**: a notification a quarter of an hour before your team kicks off, and **Full time: Liverpool 1 – 2 Arsenal** when the result comes in. It looks every half hour, and every few minutes while your team is playing.
+- **Home row**: **Scores: Your Teams**: today's matches, the latest results, then what's coming.
+- It's scores only: there's no free, legal stream of the matches to watch in Kodi. TheSportsDB's free key only gives each team's next and last five matches and live scores need its paid key (**MediaHub Scores settings** takes your own key).
+
+### MediaHub News
+
+**MediaHub News** (`plugin.video.mediahub.news`) has the headlines from the news sites you choose.
+
+- **Choose news sites** from a list (BBC News, The Guardian, Sky News, NPR, Al Jazeera, DW, France 24, CBC, ABC, The Verge, tagesschau, El País, Le Monde, ANSA, g1 and news bulletins such as NPR News Now and the BBC Global News Podcast; the ones in Kodi's language first), or **Add a news feed** by its address (any RSS or Atom feed).
+- **Top stories** puts them all together, newest first, and each site has its own list: the headline, its picture, a few lines and how long ago. A bulletin (a news podcast or video) plays. The whole article is on the web: Kodi can't show web pages, so the story shows its few lines and its address.
+- **Home row**: **News: Headlines**. **Skin settings → More from MediaHub → News ticker** runs the latest headlines along the bottom of the home screen while you're at the top (it moves out of the way in the rows). It looks for news every quarter of an hour.
+
+### MediaHub Space
+
+**MediaHub Space** (`plugin.image.mediahub.space`) has NASA's [Astronomy Picture of the Day](https://apod.nasa.gov): a picture of space every day with an astronomer's explanation.
+
+- **Today's picture** fills the screen with its explanation over the bottom (OK hides or shows it; some days it's a video, which plays). **The last few weeks**, and **A surprise from the archive** (any day since 1995).
+- **NASA live**: NASA's live stream on YouTube (with the YouTube add-on). **Where is the space station?**: how high the ISS is, what it's above, how fast it's going and whether it's in sunlight (from [wheretheiss.at](https://wheretheiss.at)).
+- **For MediaHub**: the **Space: Picture of the Day** home row, **Skin settings → More from MediaHub → Today's space picture as the background** (darkened behind the menus), and the screensaver's **Space pictures** style.
+- No account needed: it uses NASA's DEMO_KEY, which allows a few dozen requests an hour (it asks a few times a day); a free key from [api.nasa.gov](https://api.nasa.gov) can go in its settings.
+
 ## Storage
 
 **Skin settings → Storage → Picture cache** shows how much room Kodi's saved pictures (and old add-on downloads) take, and how many pictures there are. Kodi keeps a copy of every poster, backdrop and logo it has ever shown and never lets go of them, which adds up on a box with little storage like Apple TV. **Clear pictures not used for a month** removes those (through Kodi, so its picture list stays right) and the old add-on download zips; anything still in use is simply fetched again the next time it's shown.
@@ -556,7 +601,7 @@ If free memory stays under 250 MB for a minute and a half while nothing plays, L
 - **Duplicates**: the same movie twice (same IMDb / TMDB id, or same title and year), with the other file's name.
 - **Not identified**: movies and shows the scraper didn't recognise (no plot and no artwork), usually a file or folder name it couldn't make sense of.
 
-- **What's missing** (**Look for what's missing**): episodes that have been on TV but aren't in your library (from TVmaze; not the specials, nor what hasn't aired), shown per show as *3 missing: S03E01 · S03E02 · S03E03* (a whole season as *S01 (all 10)*), and the films of a collection you have part of that are out but not in your library (from TMDB, with the key from [On demand](#on-demand) or MediaHub Cinema). It takes a while, so it runs when you ask, and the answer is kept for next time.
+- **What's missing** (**Look for what's missing**): episodes that have been on TV but aren't in your library (from TVmaze; not the specials, nor what hasn't aired), shown per show as *3 missing: S03E01 · S03E02 · S03E03* (a whole season as *S01 (all 10)*), and the films of a collection you have part of that are out but not in your library (from TMDB, with the key from [On demand](#on-demand) or MediaHub Cinema). Select a collection's entry to see where each missing film can be watched in your country (streaming, free, rent or buy, from JustWatch through TMDB); with MediaHub Cinema, picking one offers its trailer and Tell me when it's out. It takes a while, so it runs when you ask, and the answer is kept for next time.
 
 **Clean library** runs Kodi's own clean, which removes what's no longer on disk. Select an entry to open it.
 
