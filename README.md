@@ -277,6 +277,8 @@ Set a **Kids mode PIN** first (in Skin settings, while Kids mode is off) and lea
 
 **Bedtime**: in **Skin settings → Kids bedtime**, set a bedtime and a wake-up time. In Kids mode, a note says *Bedtime in 10 minutes*; at bedtime, whatever is playing gets ten more minutes (or stops at its end, if that's sooner), then a **Time for bed** screen covers everything until the wake-up time. It comes back if someone closes it. **Grown-ups** on that screen asks for the Kids mode PIN and unlocks it for the rest of the night. Leaving Kids mode ends it too.
 
+**Screen time**: **Skin settings → Kids screen time** gives Kids mode a daily allowance of video (30 minutes to 3 hours). Time counts while something plays; the home screen's greeting says how much is left (*45 min of TV left today*), a note comes ten minutes before the end, and then an hourglass screen (*That's all the TV for today*) covers everything until tomorrow. **Grown-ups** on it asks for the PIN and adds 15, 30 or 60 minutes, or lifts the limit for the day. It starts again each morning.
+
 ## Family List
 
 A watch-together list for the whole house. The people button on a movie's or show's details page adds it (it fills in once it's on the list; press it again to take it off). Every profile sees the same list: it's kept in the main profile's data, and each title is matched to your own library by its IMDb / TMDB / TVDB id, or its title and year. Show it on the home screen with the **Family List** row type ([Home rows](#home-rows)); the Kids and family choice in the welcome setup includes it.
@@ -289,8 +291,20 @@ A watch-together list for the whole house. The people button on a movie's or sho
 
 Turn it on in **Skin settings → MediaHub screensaver**, and pick when it starts (2, 5, 10, 15 or 30 minutes without a button press). It shows your movies and shows while nothing is playing, and any button wakes it up. Turning it on switches Kodi's own screensaver off (turning it off puts Kodi's *Dim* back), so the two don't overlap. In Kids mode it only shows family titles.
 
-- **Screensaver style**: *Pictures from your library*, or *Big clock*: a large clock, the date and the weather on black, drifting slowly so nothing marks the screen. (A library with no backdrops yet gets the clock too.)
+- **Screensaver style**: *Pictures from your library*, *Photo frame* or *Big clock*: a large clock, the date and the weather on black, drifting slowly so nothing marks the screen. (A library with no backdrops yet gets the clock too.)
+- **Photo frame** shows your own photos: every picture in the **Photo folder** you pick (and the folders in it; a network share works too) and the ones sent from a phone with [MediaHub Web Remote](#mediahub-web-remote), in a random order, whole on a dimmed copy of themselves, with the folder's name, the clock and the weather.
+- With [MediaHub Radio](#mediahub-radio)'s alarm clock, the clock also shows the next alarm.
 - **Weather**: set **Skin settings → Weather for** to your town (*Leeds*, or *Leeds, UK* when there are several) and both styles show the temperature, what it's like and today's high and low, from [Open-Meteo](https://open-meteo.com) (free, no account), in °C or °F following Kodi's region setting. It's only looked up while the screensaver shows, at most every half hour. If Kodi has a weather add-on set up (**Settings → Services → Weather**), that one is used instead and the town setting hides.
+
+## Cinema mode (Home Assistant)
+
+**Skin settings → Cinema mode (Home Assistant)** sets the room when a film plays: Home Assistant turns on a scene or script (`scene.film_night`, `script.dim_lights`, an automation...) **when a film starts** full screen (and again when it carries on after a pause), another **when it's paused**, and another **at the end credits** (the last few minutes) or when it stops. **Episodes too** does the same for TV. Give it your Home Assistant's address (`http://homeassistant.local:8123`) and a long-lived access token (Home Assistant → your profile → Security); **Test cinema mode** turns on the first scene, then the end one ten seconds later, and says whether Home Assistant answered. Trailers on the home screen don't count, and a Home Assistant that's slow or off never holds up the film.
+
+## Movie quiz night
+
+**Movie quiz** in the side menu plays ten questions about the films in your library: a still from a film slowly zooming out, which film stars these actors, which film this plot is (its title blanked out), and when a film came out, with four answers each and 20 seconds. A faster right answer scores more (500 to 1000).
+
+Up to four people play on their phones: the lobby shows a QR code that opens [MediaHub Web Remote](#mediahub-web-remote) and pairs the phone, they type their name, and their phone becomes four big coloured answer buttons (it shows the question too, except for the stills). The TV shows who has answered, then the answer and everyone's points, and the winner at the end. With nobody on a phone, **Play with the remote** is a game for one. In Kids mode it only asks about family films.
 
 ## While you watch
 
@@ -390,6 +404,8 @@ Only use a service you are licensed to watch.
 - **Last channel**: the **Last channel** button in the player bar (and in MediaHub IPTV) goes back to the channel you watched before; press it again to swap back. **Recent channels** lists the ones you watched last.
 - **Go to channel number**: type a channel's number (from your service's own numbering) to watch it.
 - **Reminders**: in a channel's guide, hold OK on a programme that hasn't started and choose **Remind me**. A minute before it starts, a message asks whether to watch it; *Yes* switches to the channel. **Reminders** lists them, and **Cancel reminder** takes one off.
+- **Record**: hold OK on a programme (in a channel's guide, or OK in the timeline guide) and choose **Record**. On a channel with catch-up it's saved from catch-up a few minutes after it ends (so a programme that's already over can be saved straight away); on any other it's saved from the live stream while it's on, joining again if the stream drops. Recordings go to MediaHub's Downloads folder, and **Recordings** lists what's waiting, recording, recorded or didn't record: recorded ones play, and **Delete recording** removes one. Kodi needs to be on while a live programme records, and a service that allows one connection at a time can't record one channel while you watch another.
+- **TV guide: timeline**: eight channels by four hours, each programme as wide as it is long, with a line at the time now. Left and right go from programme to programme (and on by an hour at the edges), up and down from channel to channel; the programme in focus is lit up with its details above. OK watches it live, from the start or from catch-up, or offers **Remind me** and **Record**; a red dot marks a recording and a yellow one a reminder. It's in MediaHub IPTV and behind **Timeline** on the TV guide page.
 - **Catch-up**: the channels your service records, by day (today, yesterday and back as far as it keeps), then the programme. **Search catch-up** at the top finds past programmes by title or description on all of them (your channels first).
 - **Movies** and **Series**: by category, with the service's own posters, backdrops, plots, cast, ratings and trailers (a film's details arrive a moment after the page opens). A series opens its seasons and episodes.
 - **Continue Watching**: what you're part-way through resumes (or *Play from beginning*), watched titles get a tick, and playing an episode queues the next ones, so Up Next offers them. A finished episode puts the next one here.
@@ -407,7 +423,7 @@ The add-on doesn't come with any channels, films or series: it plays what your o
 
 ## More MediaHub add-ons
 
-Four more add-ons go with MediaHub (each works with any skin). Get them from **Skin settings → More from MediaHub** (or **Add-ons → Install from repository → MediaHub Repository**). Radio and Podcasts then appear in the side menu.
+Six more add-ons go with MediaHub (each works with any skin). Get them from **Skin settings → More from MediaHub** (or **Add-ons → Install from repository → MediaHub Repository**). Radio, Podcasts and Cinema then appear in the side menu.
 
 ### MediaHub Radio
 
@@ -417,6 +433,7 @@ Four more add-ons go with MediaHub (each works with any skin). Get them from **S
 - **Popular in** your country (from Kodi's region; **Your country** or the long-press menu changes it), **Most listened**, **Most voted** and **Listened to right now**.
 - **Genres**, **Countries** and **Languages**, each with the ones with the most stations first, and **Search** by name (or a genre or place).
 - The player shows the song playing when the station sends it, and the station's logo. Next and Previous in the player go through the list you started from.
+- **Alarm clock**: wake up to a station. **Add an alarm** asks the time, the days (or once) and the station (from Your stations or Recently played); select an alarm to change its volume, how long it **fades in** (up to 15 minutes), turn it off, **Try it now** or delete it. At the time, Kodi wakes the TV over HDMI-CEC where the TV allows it, starts the station quietly and turns it up, and asks **Stop** or **Snooze** (nine minutes). It doesn't ring over a film playing full screen (a note says so instead). Kodi has to be running (asleep with the screen off is fine).
 
 ### MediaHub Podcasts
 
@@ -437,7 +454,13 @@ Four more add-ons go with MediaHub (each works with any skin). Get them from **S
 
 The remote has a pad (tap the arrows, or swipe; tap OK), Back, Home, Info and Menu, what's playing with its picture and a seek bar, play / pause, skip and ±10 / 30 seconds, volume and mute, **Type on the TV** (for Kodi's keyboard), **Search** across your films, shows and MediaHub IPTV, and **Channels**: your MediaHub IPTV channels and MediaHub Radio stations, one tap to start. While a MediaHub IPTV channel plays it adds **Channel −**, **Last channel** and **Channel +**.
 
-It works on your home network only, and each phone needs the code from the TV once. **MediaHub Web Remote settings** change the port (8585) or turn it off, and **Forget paired phones** makes every phone pair again.
+**Send to TV**: paste a link and **Play on TV**: a YouTube video (with the YouTube add-on; if Kodi doesn't have it, it offers to install it), a video, song or stream address, or a picture. Or **Choose photos or videos** on the phone: they're sent to Kodi and shown as a slideshow (or the video plays), and they also appear in the [Photo frame](#screensaver) screensaver. **Clear** removes what's been sent.
+
+**Voice search**: the microphone next to Search uses the browser's speech recognition where the page is allowed to (browsers only allow it on a secure `https` page, which a remote on your home network isn't), and otherwise puts you in the search box with a tip to use the microphone on the phone's keyboard, which works everywhere. For the same reason, the phone's **Share** menu can't send to the remote: sharing to a web page needs it installed from an `https` address.
+
+**Movie quiz night**: while [the quiz](#movie-quiz-night) is on the TV, the Remote page offers to join it.
+
+It works on your home network only, and each phone needs the code from the TV once (the quiz's code works for every phone until the quiz closes). **MediaHub Web Remote settings** change the port (8585) or turn it off, and **Forget paired phones** makes every phone pair again.
 
 ### MediaHub Sync
 
@@ -454,6 +477,27 @@ What it keeps in step (each can be turned off in its settings):
 - **MediaHub Radio**: Your stations. **MediaHub Podcasts**: the podcasts you follow and where you are in each episode.
 
 Each Kodi writes only its own file in the folder's `MediaHub Sync` folder and reads the others', so two devices never write over each other. When the same thing was changed on two devices, the latest change wins. The first time, lists (your stations, podcasts, channels) are put together rather than replaced.
+
+**Carry on watching**: stop a film or episode on one Kodi and, within twelve hours, the next Kodi's home screen shows a **Carry on watching** banner (*From Living room: Night Shift, at 0:51*). **Carry on watching** plays it from there; **Dismiss** hides it.
+
+### MediaHub Cinema
+
+**MediaHub Cinema** (`plugin.video.mediahub.cinema`) shows what's at the cinema, from [TMDB](https://www.themoviedb.org).
+
+- **Now showing** and **Coming soon** at cinemas in your country (from Kodi's language, or **MediaHub Cinema settings**), and **Search**, with posters, backdrops and what each film is about. Selecting a film plays its **trailer** (with the YouTube add-on); **About this film** has its cast and when it comes out at home.
+- **Tell me when it's out at home**: twice a day it checks the films you picked, and says when one can be bought or rented (or is out on disc) in your country, or turns up in your library. **Waiting for** and **Out at home** list them.
+- **Home rows**: **Cinema: Now Showing** and **Cinema: Coming Soon**; a card offers the trailer, Tell me and About.
+- It needs a free TMDB API key (themoviedb.org → Settings → API): its own setting, or the one [On demand](#on-demand) already uses. Cinema times near you aren't included: there's no free, open listing of them.
+
+### MediaHub Import
+
+**MediaHub Import** (`script.mediahub.import`) brings your IMDb and Letterboxd history into Kodi. Export it first (**How to get the files** explains): IMDb gives a `.csv` of your ratings, your watchlist or a list; Letterboxd gives a `.zip` of everything. **Import a file**, pick it, and for the films and shows you have:
+
+- your **watchlist** or list goes into **My List**, in its order;
+- your **ratings** become MediaHub's thumbs (9–10 love, 6–8 up, 1–4 down; Letterboxd's out of five counts double) and Letterboxd's **likes** become love; thumbs you've already given stay unless you choose **Replace thumbs you've already given**;
+- what you've **rated or watched** is marked watched, on the day you did.
+
+IMDb titles are found by their IMDb id (so they match even when the title's spelled differently), Letterboxd's by title and year. It asks which of these to do, and ends with what isn't in your library.
 
 ## Storage
 

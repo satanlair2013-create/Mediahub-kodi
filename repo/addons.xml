@@ -17,10 +17,10 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="skin.mediahub" version="1.15.0" name="MediaHub" provider-name="MediaHub">
+<addon id="skin.mediahub" version="1.16.0" name="MediaHub" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
-		<import addon="script.mediahub.helper" version="1.12.0"/>
+		<import addon="script.mediahub.helper" version="1.13.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml"/>
@@ -38,10 +38,10 @@
 			<screenshot>resources/screenshot-02.jpg</screenshot>
 			<screenshot>resources/screenshot-03.jpg</screenshot>
 		</assets>
-		<news>1.15.0 - Four new MediaHub add-ons, from Skin settings > More from MediaHub: MediaHub Radio and MediaHub Podcasts (in the side menu, with Radio: Your Stations, Radio: Recently Played, Podcasts: New Episodes and Podcasts: Continue Listening home rows), MediaHub Web Remote (your phone as the remote: scan a QR code) and MediaHub Sync (what you've watched and your lists, the same on every Kodi). 1.14.0 - MediaHub IPTV: a TV guide page, a Channels panel and mini guide while you watch, a Last channel button, channel numbers, programme reminders, catch-up search, My List, downloads, more than one account and an IPTV banner on the home screen. Stream info in the player bar, a show's theme music on its page, and Stop after this one on live TV. 1.13.0 - MediaHub IPTV: Start over and Back to live in the player bar, an IPTV: My Channels row on the home screen, and NEW EPISODES when a series you follow gets more. A trailer that needs the YouTube add-on offers to install it. 1.12.0 - MediaHub IPTV, a new add-on for Xtream Codes IPTV services: live TV with what's on now and next, catch-up, films and series with their posters and plots, resume and the next episode, search, and the account. It gets an IPTV entry in the side menu, a section in Skin settings and three home rows: Continue Watching: IPTV, IPTV: New Movies and IPTV: New Series. 1.11.0 - On demand remembers where you stopped: resume, a tick for what you've watched, the next episode queued, and a Continue Watching: On Demand row; posters and plots (TVmaze, and TMDB with a free key); hide playlist groups behind the Kids mode PIN. Search also finds On demand shows, films and Live TV channels. Live TV: a last-channel button, home rows of a channel group like Sports or News, and a Live TV settings section (catch-up, reminders). Each show remembers its audio language and subtitles. The screensaver shows today's weather and has a Big clock style. Skin settings > Storage clears pictures Kodi no longer uses. 1.10.1 - A much smaller download: the 1.10.0 package also held a large file left over from testing. Nothing else changes. 1.10.0 - On demand: an IPTV video-on-demand playlist as TV shows (by season) and movies, without loading it into Live TV. My Channels on the home screen and a mini guide while watching Live TV. Lite mode for Apple TV, with a memory reading. Rows from any add-on, and Move or hide this row from the home screen. A Calendar of upcoming episodes, New This Week, Directed By and Marvel in Story Order rows, and New since you were last here. The long-press menu says what it is for and plays trailers. Trakt set-up, a pure black background, Library health, and German, Spanish, French, Italian and Brazilian Portuguese. 1.9.2 - Fixes Kodi closing by itself a little after start-up when Live TV has a very large channel list (such as an IPTV video-on-demand playlist): the On now row now lists only the channels you watched last. 1.9.1 - Fixes Kodi closing by itself when the MediaHub Helper was updated (or Kodi closed) while the banner trailer was playing. If Kodi ever closes on its own, MediaHub now says where it happened and offers Safe mode. 1.9.0 - A welcome setup; Top 10 rows, a silent trailer in the banner, a greeting and an On now row for Live TV; ratings badges, extras and season progress; a sleep timer, subtitle styles, Are you still watching? and an after-movie page; Kids bedtime, a shared Family List and backup / restore; large text, high contrast, reduce motion, colour from the artwork and lyrics. 1.8.0 - A start-up intro with its own sound, and a MediaHub splash while Kodi loads. 1.7.0 - Trailer previews in the home rows, Because You Watched, mood rows and Coming Soon; Finish by, chapters, intro memory and Night / Dialogue sound modes in the player; people search, a mic key, Surprise me and Movies filter chips; profile avatars, Your year and downloads; seasonal themes and animated network cards. 1.6.1 - Fixed "Update failed" when pressing Update now: the update is now handed to Kodi's own installer. 1.6.0 - New player bar with the title's clearart or logo and 4K / HDR / Dolby / 5.1 badges, an Audio &amp; Subtitles panel, Skip Recap and Skip Credits, NEW and 4K badges, collection pages, a MediaHub screensaver, music screens and Live TV.</news>
+		<news>1.16.0 - Carry on watching: a film or episode you stopped on another Kodi (with MediaHub Sync). Movie quiz night in the side menu, played on phones with MediaHub Web Remote or with the remote. A timeline TV guide and recordings for MediaHub IPTV. Kids screen time, a Photo frame screensaver of your own photos, and Cinema mode, which sets the room with Home Assistant. Pictures and slideshows now open in the skin. The next MediaHub Radio alarm shows on the screensaver clock, and MediaHub Cinema gets home rows and a place in the side menu. 1.15.0 - Four new MediaHub add-ons, from Skin settings > More from MediaHub: MediaHub Radio and MediaHub Podcasts (in the side menu, with Radio: Your Stations, Radio: Recently Played, Podcasts: New Episodes and Podcasts: Continue Listening home rows), MediaHub Web Remote (your phone as the remote: scan a QR code) and MediaHub Sync (what you've watched and your lists, the same on every Kodi). 1.14.0 - MediaHub IPTV: a TV guide page, a Channels panel and mini guide while you watch, a Last channel button, channel numbers, programme reminders, catch-up search, My List, downloads, more than one account and an IPTV banner on the home screen. Stream info in the player bar, a show's theme music on its page, and Stop after this one on live TV. 1.13.0 - MediaHub IPTV: Start over and Back to live in the player bar, an IPTV: My Channels row on the home screen, and NEW EPISODES when a series you follow gets more. A trailer that needs the YouTube add-on offers to install it. 1.12.0 - MediaHub IPTV, a new add-on for Xtream Codes IPTV services: live TV with what's on now and next, catch-up, films and series with their posters and plots, resume and the next episode, search, and the account. It gets an IPTV entry in the side menu, a section in Skin settings and three home rows: Continue Watching: IPTV, IPTV: New Movies and IPTV: New Series. 1.11.0 - On demand remembers where you stopped: resume, a tick for what you've watched, the next episode queued, and a Continue Watching: On Demand row; posters and plots (TVmaze, and TMDB with a free key); hide playlist groups behind the Kids mode PIN. Search also finds On demand shows, films and Live TV channels. Live TV: a last-channel button, home rows of a channel group like Sports or News, and a Live TV settings section (catch-up, reminders). Each show remembers its audio language and subtitles. The screensaver shows today's weather and has a Big clock style. Skin settings > Storage clears pictures Kodi no longer uses. 1.10.1 - A much smaller download: the 1.10.0 package also held a large file left over from testing. Nothing else changes. 1.10.0 - On demand: an IPTV video-on-demand playlist as TV shows (by season) and movies, without loading it into Live TV. My Channels on the home screen and a mini guide while watching Live TV. Lite mode for Apple TV, with a memory reading. Rows from any add-on, and Move or hide this row from the home screen. A Calendar of upcoming episodes, New This Week, Directed By and Marvel in Story Order rows, and New since you were last here. The long-press menu says what it is for and plays trailers. Trakt set-up, a pure black background, Library health, and German, Spanish, French, Italian and Brazilian Portuguese. 1.9.2 - Fixes Kodi closing by itself a little after start-up when Live TV has a very large channel list (such as an IPTV video-on-demand playlist): the On now row now lists only the channels you watched last. 1.9.1 - Fixes Kodi closing by itself when the MediaHub Helper was updated (or Kodi closed) while the banner trailer was playing. If Kodi ever closes on its own, MediaHub now says where it happened and offers Safe mode. 1.9.0 - A welcome setup; Top 10 rows, a silent trailer in the banner, a greeting and an On now row for Live TV; ratings badges, extras and season progress; a sleep timer, subtitle styles, Are you still watching? and an after-movie page; Kids bedtime, a shared Family List and backup / restore; large text, high contrast, reduce motion, colour from the artwork and lyrics. 1.8.0 - A start-up intro with its own sound, and a MediaHub splash while Kodi loads. 1.7.0 - Trailer previews in the home rows, Because You Watched, mood rows and Coming Soon; Finish by, chapters, intro memory and Night / Dialogue sound modes in the player; people search, a mic key, Surprise me and Movies filter chips; profile avatars, Your year and downloads; seasonal themes and animated network cards. 1.6.1 - Fixed "Update failed" when pressing Update now: the update is now handed to Kodi's own installer. 1.6.0 - New player bar with the title's clearart or logo and 4K / HDR / Dolby / 5.1 badges, an Audio &amp; Subtitles panel, Skip Recap and Skip Credits, NEW and 4K badges, collection pages, a MediaHub screensaver, music screens and Live TV.</news>
 	</extension>
 </addon>
-<addon id="script.mediahub.helper" name="MediaHub Helper" version="1.12.0" provider-name="MediaHub">
+<addon id="script.mediahub.helper" name="MediaHub Helper" version="1.13.0" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
 	</requires>
@@ -93,10 +93,10 @@
 		<assets>
 			<icon>resources/icon.png</icon>
 		</assets>
-		<news>1.12.0 - The home rows of MediaHub Radio and MediaHub Podcasts. 1.11.0 - Theme music on a show's page, Stop after this one on live TV, MediaHub IPTV downloads and IPTV titles in the My List row. 1.10.0 - The IPTV: My Channels row, and the offer to install YouTube for trailers. 1.9.0 - The home rows of MediaHub IPTV (Continue Watching: IPTV, IPTV: New Movies, IPTV: New Series). 1.8.0 - On demand resume, watched ticks, next episode and the Continue Watching: On Demand row; posters and plots; hidden playlist groups; On demand and Live TV channels in search; last channel and channel-group rows; per-show audio and subtitle languages; the screensaver's weather and Big clock; clearing unused pictures. 1.7.1 - A much smaller download: the 1.7.0 package also held a large file left over from testing. 1.7.0 - On demand (an IPTV video-on-demand playlist as shows and movies), My Channels, Lite mode, the add-on folder picker for custom rows, Move or hide this row, the Calendar (TVmaze), New This Week, Directed By and Marvel in Story Order, New since you were last here, Play trailer, Library health, and translations. 1.6.3 - After Kodi closes on its own, the log of the next start holds the last lines Kodi wrote before it closed, and the screen, view and memory in use at the last few places, so an uploaded log shows what happened. 1.6.2 - Check for updates works again: it said "Couldn't check - are you online?" because the download site sends its list of versions compressed. 1.6.1 - Fixes Kodi closing by itself when the helper was updated (or Kodi closed) while the banner trailer was playing: stopping the helper no longer hangs until Kodi kills it. Notices when Kodi closed on its own, says where it happened, and offers Safe mode (no trailer previews or moving effects). 1.6.0 - Sleep timer, subtitle styles, Are you still watching?, the after-movie page, the banner trailer, Remove from Continue Watching, ratings badges, extras, Mark season watched, Kids bedtime, the Family List, backup / restore and the text size setting. 1.5.0 - Plays the start-up intro and its sound, and puts the MediaHub splash in place. 1.4.0 - Trailer previews, Because You Watched, Coming Soon, Finish by, intro memory, sound modes, people search, Surprise me, avatars, Your year and downloads. 1.3.1 - Update now no longer fails: it hands the update to Kodi and finishes after Kodi restarts the helper. 1.3.0 - Collections, NEW badges, the audio / subtitle track list and the MediaHub screensaver.</news>
+		<news>1.13.0 - Cinema mode (Home Assistant), Kids screen time, the Photo frame screensaver, Movie quiz night and MediaHub Cinema's home rows. Trailer previews on the home screen never ask "Resume from". 1.12.0 - The home rows of MediaHub Radio and MediaHub Podcasts. 1.11.0 - Theme music on a show's page, Stop after this one on live TV, MediaHub IPTV downloads and IPTV titles in the My List row. 1.10.0 - The IPTV: My Channels row, and the offer to install YouTube for trailers. 1.9.0 - The home rows of MediaHub IPTV (Continue Watching: IPTV, IPTV: New Movies, IPTV: New Series). 1.8.0 - On demand resume, watched ticks, next episode and the Continue Watching: On Demand row; posters and plots; hidden playlist groups; On demand and Live TV channels in search; last channel and channel-group rows; per-show audio and subtitle languages; the screensaver's weather and Big clock; clearing unused pictures. 1.7.1 - A much smaller download: the 1.7.0 package also held a large file left over from testing. 1.7.0 - On demand (an IPTV video-on-demand playlist as shows and movies), My Channels, Lite mode, the add-on folder picker for custom rows, Move or hide this row, the Calendar (TVmaze), New This Week, Directed By and Marvel in Story Order, New since you were last here, Play trailer, Library health, and translations. 1.6.3 - After Kodi closes on its own, the log of the next start holds the last lines Kodi wrote before it closed, and the screen, view and memory in use at the last few places, so an uploaded log shows what happened. 1.6.2 - Check for updates works again: it said "Couldn't check - are you online?" because the download site sends its list of versions compressed. 1.6.1 - Fixes Kodi closing by itself when the helper was updated (or Kodi closed) while the banner trailer was playing: stopping the helper no longer hangs until Kodi kills it. Notices when Kodi closed on its own, says where it happened, and offers Safe mode (no trailer previews or moving effects). 1.6.0 - Sleep timer, subtitle styles, Are you still watching?, the after-movie page, the banner trailer, Remove from Continue Watching, ratings badges, extras, Mark season watched, Kids bedtime, the Family List, backup / restore and the text size setting. 1.5.0 - Plays the start-up intro and its sound, and puts the MediaHub splash in place. 1.4.0 - Trailer previews, Because You Watched, Coming Soon, Finish by, intro memory, sound modes, people search, Surprise me, avatars, Your year and downloads. 1.3.1 - Update now no longer fails: it hands the update to Kodi and finishes after Kodi restarts the helper. 1.3.0 - Collections, NEW badges, the audio / subtitle track list and the MediaHub screensaver.</news>
 	</extension>
 </addon>
-<addon id="plugin.video.mediahub.xtream" name="MediaHub IPTV" version="1.2.1" provider-name="MediaHub">
+<addon id="plugin.video.mediahub.xtream" name="MediaHub IPTV" version="1.3.0" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
 	</requires>
@@ -110,27 +110,28 @@
 		<disclaimer lang="en_GB">This add-on does not provide any channels, films or series: it plays what your own IPTV service offers you.</disclaimer>
 		<platform>all</platform>
 		<license>GPL-2.0-or-later</license>
-		<news>1.2.1 - Channel up and down from MediaHub Web Remote (the next or previous channel of the list you came from). 1.2.0 - A TV guide page; the Channels panel, mini guide and Last channel in MediaHub's player; Recent channels and Go to channel number; programme reminders; Search catch-up; My List; downloads of films and episodes (with MediaHub); more than one account; MediaHub's IPTV home banner. 1.1.0 - Start over (the programme on now from its beginning) and Back to live; My channels, with a home row in MediaHub; NEW EPISODES and the next episode when a series you follow gets more. 1.0.0 - First release: sign in, live TV with now and next, catch-up, films, series, Continue Watching, Recently added, Search, the account, and set-up help for Kodi's Live TV.</news>
+		<news>1.3.0 - Record programmes to MediaHub's Downloads (from catch-up once they're over, or live while they're on), a Recordings page, and TV guide: timeline. 1.2.1 - Channel up and down from MediaHub Web Remote (the next or previous channel of the list you came from). 1.2.0 - A TV guide page; the Channels panel, mini guide and Last channel in MediaHub's player; Recent channels and Go to channel number; programme reminders; Search catch-up; My List; downloads of films and episodes (with MediaHub); more than one account; MediaHub's IPTV home banner. 1.1.0 - Start over (the programme on now from its beginning) and Back to live; My channels, with a home row in MediaHub; NEW EPISODES and the next episode when a series you follow gets more. 1.0.0 - First release: sign in, live TV with now and next, catch-up, films, series, Continue Watching, Recently added, Search, the account, and set-up help for Kodi's Live TV.</news>
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
 </addon>
-<addon id="plugin.audio.mediahub.radio" name="MediaHub Radio" version="1.0.0" provider-name="MediaHub">
+<addon id="plugin.audio.mediahub.radio" name="MediaHub Radio" version="1.1.0" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
 	</requires>
+	<extension point="xbmc.service" library="service.py" start="login"/>
 	<extension point="xbmc.python.pluginsource" library="plugin.py">
 		<provides>audio</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Thousands of internet radio stations from around the world</summary>
-		<description lang="en_GB">Listen to internet radio stations from radio-browser.info, a free, community-run list with no account needed: what's popular in your country, the most listened and most voted stations, and every station by genre, country or language, with search. Add the ones you like to Your stations. Made for the MediaHub skin (side menu, home rows), and works with any skin.</description>
+		<description lang="en_GB">Listen to internet radio stations from radio-browser.info, a free, community-run list with no account needed: what's popular in your country, the most listened and most voted stations, and every station by genre, country or language, with search. Add the ones you like to Your stations, and wake up to one with the alarm clock (it fades in, and turns the TV on where it can). Made for the MediaHub skin (side menu, home rows), and works with any skin.</description>
 		<disclaimer lang="en_GB">Stations are listed by radio-browser.info and streamed by their broadcasters; MediaHub doesn't host or check them.</disclaimer>
 		<platform>all</platform>
 		<license>GPL-2.0-or-later</license>
-		<news>1.0.0 - First release: Your stations, Recently played, Popular in your country, Most listened, Most voted, Listened to right now, genres, countries, languages and search.</news>
+		<news>1.1.0 - An alarm clock: wake up to a station, fading in, with snooze. 1.0.0 - First release: Your stations, Recently played, Popular in your country, Most listened, Most voted, Listened to right now, genres, countries, languages and search.</news>
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
@@ -158,7 +159,7 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="service.mediahub.webremote" name="MediaHub Web Remote" version="1.0.0" provider-name="MediaHub">
+<addon id="service.mediahub.webremote" name="MediaHub Web Remote" version="1.1.0" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
 	</requires>
@@ -168,18 +169,18 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Use your phone's web browser as Kodi's remote</summary>
-		<description lang="en_GB">Scan the QR code from Connect a phone (or open the address it shows) in your phone's browser: nothing to install. A remote with a touch pad, what's playing with its picture and a seek bar, volume, typing on the TV, search across your films, shows and IPTV, and your IPTV channels and radio stations to start with one tap. Each phone is paired once with a code the TV shows. Made for the MediaHub skin, and works with any skin.</description>
+		<description lang="en_GB">Scan the QR code from Connect a phone (or open the address it shows) in your phone's browser: nothing to install. A remote with a touch pad, what's playing with its picture and a seek bar, volume, typing on the TV, search across your films, shows and IPTV, your IPTV channels and radio stations to start with one tap, Send to TV (a YouTube or video link, or photos and videos from your phone) and MediaHub's Movie quiz night on your phone. Each phone is paired once with a code the TV shows. Made for the MediaHub skin, and works with any skin.</description>
 		<disclaimer lang="en_GB">The remote works on your home network only. Anyone who wants to use it needs the code shown on the TV.</disclaimer>
 		<platform>all</platform>
 		<license>GPL-2.0-or-later (qrcodegen: MIT)</license>
-		<news>1.0.0 - First release: pairing with a QR code or a code on the TV, remote pad, now playing with seek, volume, typing, search, and IPTV channels and radio stations.</news>
+		<news>1.1.0 - Send to TV: YouTube and video links, and photos and videos from your phone. Voice search where the browser allows it, and Movie quiz night on your phone. 1.0.0 - First release: pairing with a QR code or a code on the TV, remote pad, now playing with seek, volume, typing, search, and IPTV channels and radio stations.</news>
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 	</extension>
 </addon>
-<addon id="service.mediahub.sync" name="MediaHub Sync" version="1.0.0" provider-name="MediaHub">
+<addon id="service.mediahub.sync" name="MediaHub Sync" version="1.1.0" provider-name="MediaHub">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
 	</requires>
@@ -189,11 +190,52 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Keep what you've watched and your lists the same on every Kodi</summary>
-		<description lang="en_GB">Pick a folder every Kodi in the house can reach (a network share, a NAS, or a folder a cloud drive keeps in step) and MediaHub Sync keeps them in step: what you've watched and where you stopped, your thumbs and My List (films and shows are matched by their IMDb or TMDB id, so the libraries don't have to be the same), MediaHub's Family List, MediaHub IPTV's progress, channels, My List and reminders, MediaHub Radio's stations and MediaHub Podcasts' podcasts and progress. Each Kodi writes only its own file, and the latest change wins. Made for MediaHub, and works with any skin.</description>
+		<description lang="en_GB">Pick a folder every Kodi in the house can reach (a network share, a NAS, or a folder a cloud drive keeps in step) and MediaHub Sync keeps them in step: what you've watched and where you stopped, your thumbs and My List (films and shows are matched by their IMDb or TMDB id, so the libraries don't have to be the same), MediaHub's Family List, MediaHub IPTV's progress, channels, My List and reminders, MediaHub Radio's stations and MediaHub Podcasts' podcasts and progress. Each Kodi writes only its own file, and the latest change wins. Stop a film or episode on one Kodi and MediaHub's home screen offers to carry on from there on another. Made for MediaHub, and works with any skin.</description>
 		<disclaimer lang="en_GB">Nothing leaves your folder: there's no MediaHub account or server.</disclaimer>
 		<platform>all</platform>
 		<license>GPL-2.0-or-later</license>
-		<news>1.0.0 - First release: watched, resume points, thumbs and My List, the Family List, and MediaHub IPTV, Radio and Podcasts, through a shared folder.</news>
+		<news>1.1.0 - Carry on watching: stop a film or episode on one Kodi and MediaHub offers to carry on from there on the next. 1.0.0 - First release: watched, resume points, thumbs and My List, the Family List, and MediaHub IPTV, Radio and Podcasts, through a shared folder.</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+<addon id="script.mediahub.import" name="MediaHub Import" version="1.0.0" provider-name="MediaHub">
+	<requires>
+		<import addon="xbmc.python" version="3.0.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Bring your IMDb and Letterboxd lists and ratings into Kodi</summary>
+		<description lang="en_GB">Export your ratings, watchlist or lists from IMDb (a .csv) or everything from Letterboxd (a .zip), and MediaHub Import finds the films and shows you have in your library: your watchlist goes into My List, your ratings become thumbs (love, up or down), and what you've rated or watched is marked as watched. It ends with what was found and what isn't in your library. Made for the MediaHub skin, and works with any skin.</description>
+		<disclaimer lang="en_GB">It only reads the file you choose: nothing is sent anywhere.</disclaimer>
+		<platform>all</platform>
+		<license>GPL-2.0-or-later</license>
+		<news>1.0.0 - First release: IMDb ratings, watchlist and lists; Letterboxd's watched films, ratings, watchlist and likes.</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+<addon id="plugin.video.mediahub.cinema" name="MediaHub Cinema" version="1.0.0" provider-name="MediaHub">
+	<requires>
+		<import addon="xbmc.python" version="3.0.1"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">What's on at the cinema and coming soon, with trailers</summary>
+		<description lang="en_GB">The films showing at cinemas in your country and the ones coming soon, from TMDB, with their posters, trailers (with the YouTube add-on) and what they're about. Choose "Tell me when it's out at home" on any film and it lets you know when you can buy or rent it, or when it turns up in your library. It needs a free TMDB API key (themoviedb.org), which MediaHub can share with On demand. Made for the MediaHub skin (Cinema: Now Showing and Cinema: Coming Soon home rows), and works with any skin.</description>
+		<disclaimer lang="en_GB">Film details and pictures come from TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB. Cinema times near you aren't included: there's no free, open listing of them.</disclaimer>
+		<platform>all</platform>
+		<license>GPL-2.0-or-later</license>
+		<news>1.0.0 - First release: Now showing, Coming soon, search, trailers, and Tell me when it's out at home.</news>
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
